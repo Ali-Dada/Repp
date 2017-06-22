@@ -551,3 +551,204 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 =============================================================================
 
+D:\meteor\2d-1 [master +4 ~0 -0 !]> git commit -a -m "set auto add on1"
+[master 98ef0ce] set auto add on1
+ 1 file changed, 21 insertions(+)
+:
+D:\meteor\2d-1 [master +4 ~0 -0 !]> git commit -a -m -v "set auto add on2"
+fatal: Paths with -a does not make sense.
+
+=============================================================================
+
+D:\meteor\2d-1 [master +4 ~0 -0 !]> git log
+commit 98ef0ce690a9a67f9537ece731d2fe126df157cc
+Author: Ali-Dada <alidada@yahoo.com>
+Date:   Thu Jun 22 14:38:53 2017 +0300
+
+    set auto add on1
+
+commit aa9ab5187ff0e459f875a77263458f89e9c50748
+Author: Ali-Dada <alidada@yahoo.com>
+Date:   Thu Jun 22 14:35:57 2017 +0300
+
+    set auto add on
+
+commit f4bf563027e44bb357aad2e3af21dd2f077bd826
+Author: Ali-Dada <alidada@yahoo.com>
+Date:   Thu Jun 22 14:28:23 2017 +0300
+
+    first version of 2d named 2d-1. begin with git
+
+=============================================================================
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> gitk
+
+=============================================================================
+=============================================================================
+=============================================================================
+
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git remote add 2d1 https://github.com/Ali-Da
+da/Repp/projects/1
+:
+:
+ ESC[D
+
+diff --git a/NB.txt b/NB.txt
+index 84611c8..fe5f177 100644
+--- a/NB.txt
++++ b/NB.txt
+@@ -419,3 +419,70 @@ d:\meteor\2d-1\.git
+
+ ============================================================================
+
++D:\meteor\2d-1 [master +6 ~0 -0 !]> git add -n client/*.*
++warning: LF will be replaced by CRLF in client/main.html.
++The file will have its original line endings in your working directory.
++add 'client/client.rar'
++add 'client/main.html'
++add 'client/main.js'
++warning: LF will be replaced by CRLF in client/main.js.
++The file will have its original line endings in your working directory.
++
++===========================================================================
++
++D:\meteor\2d-1 [master +6 ~0 -0 !]> git add client/*.*
++warning: LF will be replaced by CRLF in client/main.html.
++The file will have its original line endings in your working directory.
++warning: LF will be replaced by CRLF in client/main.js.
++The file will have its original line endings in your working directory.
++
++===========================================================================
++
++D:\meteor\2d-1 [master +3 ~0 -0 | +5 ~0 -0 !]> git status
++On branch master
++
++Initial commit
++
++Changes to be committed:
++  (use "git rm --cached <file>..." to unstage)
++
++        new file:   client/client.rar
+ ESC[D
+
+commit 98ef0ce690a9a67f9537ece731d2fe126df157cc
+Author: Ali-Dada <alidada@yahoo.com>
+Date:   Thu Jun 22 14:38:53 2017 +0300
+
+    set auto add on1
+
+diff --git a/NB.txt b/NB.txt
+index aae4fd9..a6eb187 100644
+--- a/NB.txt
++++ b/NB.txt
+@@ -530,3 +530,24 @@ d named 2d-1. begin with git"
+
+ =============================================================================
+
++D:\meteor\2d-1 [master +4 ~1 -0 !]> git commit -a -m "set auto add on"
++[master aa9ab51] set auto add on
++ 1 file changed, 111 insertions(+)
++:git commit -m "first version of 2d named 2d-1. begin with git"
++
++=============================================================================
++
++D:\meteor\2d-1 [master +4 ~0 -0 !]> git status
++On branch master
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++
++        .gitignore
++        .meteor/
++        package.json
++        server/
++
++nothing added to commit but untracked files present (use "git add" to track)
++
++=============================================================================
++
+
+:
+:
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git remote
+2d1
+
+==============================================================================
+
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git remote add 2d1a https://github.com/Ali-D
+ada/Repp
+
+==============================================================================
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git remote
+2d1
+2d1a
+:
+
+==============================================================================
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git push 2d1a
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream 2d1a master
+
+:
+
+=============================================================================
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git push --set-upstream 2d1a master
+Counting objects: 12, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 6.97 KiB | 0 bytes/s, done.
+Total 12 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+Branch master set up to track remote branch master from 2d1a.
+To https://github.com/Ali-Dada/Repp
+ * [new branch]      master -> master
+
+===========================================================================
+
+D:\meteor\2d-1 [master ? +4 ~1 -0 !]> git remote show 2d1a
+* remote 2d1a
+  Fetch URL: https://github.com/Ali-Dada/Repp
+  Push  URL: https://github.com/Ali-Dada/Repp
+  HEAD branch: master
+  Remote branches:
+    master tracked
+    root   new (next fetch will store in remotes/2d1a)
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+==========================================================================
+
+D:\meteor\2d-1 [master ? +4 ~1 -0 !]> git fetch 2d1a
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Ali-Dada/Repp
+ * [new branch]      root       -> 2d1a/root
+
+=========================================================================
+
+D:\meteor\2d-1 [master ? +4 ~0 -3 !]> git remote
+2d1
+2d1a
+:
+
+=========================================================================
+
+
+D:\meteor\2d-1 [master ? +4 ~0 -3 !]> git remote rm 2d1
+:
+=========================================================================
+
+D:\meteor\2d-1 [master ? +4 ~0 -3 !]> git remote
+2d1a
+
+========================================================================
