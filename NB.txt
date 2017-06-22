@@ -752,3 +752,52 @@ D:\meteor\2d-1 [master ? +4 ~0 -3 !]> git remote
 2d1a
 
 ========================================================================
+
+
+
+
+
+
+
+
+
+
+
+Windows PowerShell
+(C) Êîðïîðàöèÿ Ìàéêðîñîôò, 2009. Âñå ïðàâà çàùèùåíû.
+
+ÏÐÅÄÓÏÐÅÆÄÅÍÈÅ: posh-git support for PowerShell 2.0 is deprecated; you have
+version 2.0.
+To download version 5.0, please visit
+https://www.microsoft.com/en-us/download/details.aspx?id=50395
+For more information and to discuss this, please visit
+https://github.com/dahlbyk/posh-git/issues/163
+To suppress this warning, change your profile to include 'Import-Module
+posh-git -Args $true'.
+
+========================================================================
+
+~\Documents\GitHub [master +24 ~0 -0 !]> d:
+
+D:\> cd meteor
+
+========================================================================
+
+D:\meteor> cd 2d-1
+
+========================================================================
+
+D:\meteor\2d-1 [nbrch +4 ~1 -0 !]> git branch
+  master
+* nbrch
+
+========================================================================
+
+D:\meteor\2d-1 [nbrch +4 ~1 -0 !]>
+
+========================================================================
+------------------------------------------------------------------------
+========================================================================
+########################################################################
+
+
