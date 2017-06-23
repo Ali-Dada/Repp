@@ -1,0 +1,29 @@
+﻿https://medium.com/@purplecones/deploying-a-meteor-app-for-free-using-zeit-now-c183329057c9
+Super Simple and Free Meteor Deployments using ZEIT ▲now
+
+https://zeit.co/docs/getting-started/introduction-to-now#
+Введение в развертывание и хостинг API - интерфейсов и веб - сайтов на настоящее 
+An Introduction to Deploying and Hosting APIs and Websites On now
+
+http://meteortips.com/deployment-tutorial/compose/
+Начало работы с Метеор развертывания
+Getting Started with Meteor Deployment
+
+
+Microsoft Windows [Version 6.1.7601]
+(c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
+
+C:\Users\user>cd /
+
+C:\>cd amrija
+
+C:\Amrija>meteor create --full .
+Created a new Meteor app in current directory.
+
+To run your new app:
+  meteor
+
+If you are new to Meteor, try some of the learning resources here:
+  https://www.meteor.com/learn
+
+
