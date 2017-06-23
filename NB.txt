@@ -40,4 +40,7 @@ C:\Amrija>meteor --port 3333
 => App running at: http://localhost:3333/
    Type Control-C twice to stop.
 
+=> Client modified -- refreshing (x2)
+
 ========================================
+
