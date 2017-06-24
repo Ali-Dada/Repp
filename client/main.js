@@ -103,7 +103,8 @@ Template.rndom.events({
   console.log(   i + "]   " + result + ";" );
   //console.log("   arr= " + arr + ";" );
   //console.log("   v= " + v + ";" );
-  
+  console.log("   объявление переменных" )
+  console.log("   set и let" );
   var a = 12; //доступна глобально
   function myFunction()
   {
