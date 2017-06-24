@@ -44,3 +44,22 @@ C:\Amrija>meteor --port 3333
 
 ========================================
 
+
+user@WIN-7AJ7FDSCVO2 MINGW64 /c/Amrija (work-002)
+$ git remote
+Repp
+
+user@WIN-7AJ7FDSCVO2 MINGW64 /c/Amrija (work-002)
+$ git branch
+  begin-0
+  begin-1
+  begin_with_2d-1
+  master
+  work-001
+* work-002
+
+user@WIN-7AJ7FDSCVO2 MINGW64 /c/Amrija (work-002)
+$
+
+=======================================
+

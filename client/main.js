@@ -99,23 +99,24 @@ Template.rndom.events({
   v=str.repeat(times);//  метод repeat
   alert( v ); 
   let rf=Random.fraction()
-  document.write(i + "]   " + result + ";" );
+  //document.write(i + "]   " + result + ";" );
   console.log(   i + "]   " + result + ";" );
-  console.log("   arr= " + arr + ";" );
-  console.log("   v= " + v + ";" );
+  //console.log("   arr= " + arr + ";" );
+  //console.log("   v= " + v + ";" );
   
   var a = 12; //доступна глобально
   function myFunction()
   {
-	  console.log('a='+a);
-	  var b=13;// доступна в пределах функции 
+	  console.log('a='+a+' - доступна глобально');
+	  var b=13;// доступна в пределах функции
+	  var c=14;// доступна в пределах функции
 	  if( true)
 	  {
-		  var c=14;// доступна в пределах функции 
-		  console.log('b='+b)
-		  console.log('c='+c)
+		  let c=15;// доступна в пределах функции
+		  console.log('b='+b+' - доступна в пределах функции')
+		  console.log('c='+c+' - доступна в пределах блока')
 	  }  
-		  console.log('c='+c)
+		  console.log('c='+c+' - доступна в пределах функции')
   }
   
   myFunction();
