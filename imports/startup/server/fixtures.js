@@ -23,7 +23,7 @@ Meteor.startup(() => {
         createdAt: new Date(),
       },
       {
-        title: 'Disc-Cussions',
+        title: 'Discussions',
         url: 'https://forums.meteor.com',
         createdAt: new Date(),
       },
