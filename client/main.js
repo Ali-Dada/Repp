@@ -1,9 +1,8 @@
 // Client entry point, imports all client code
 
+
 import '/imports/startup/client';
 import '/imports/startup/both';
-
-
 
 
 import { Template } from 'meteor/templating';
@@ -76,6 +75,10 @@ Template.rndom.events({
   'click button'(event, instance) {
     // increment the counter when button is clicked
 
+  console.log('_'.repeat(64) )
+  console.log("   Сумма N вещ случ чисел от -1 до +1" )
+  console.log("   (N:  сл число от 1 до 1000)" );
+	
 	function sg(x)
 {   if (x >= 0.5)
         return 1;
@@ -88,11 +91,13 @@ Template.rndom.events({
 	 var ni = Random.fraction()*1000+1
 	 for (i = 0; i <= ni; i++){
 	result = sg(Random.fraction()) * Random.fraction() + result;
-	console.log(i + "] " + result + ";" );
+	//console.log(i + "] " + result + ";" );
 		instance.counter.set(result);
  };
  i=i-1;
  console.log(i + "] " + result + ";" );
+ 
+ 
  
   let arr = [" hello!", 5]; // let
   let [str, times] = arr; // деструктуризация
@@ -100,11 +105,15 @@ Template.rndom.events({
   alert( v ); 
   let rf=Random.fraction()
   //document.write(i + "]   " + result + ";" );
-  console.log(   i + "]   " + result + ";" );
+  //console.log(   i + "]   " + result + ";" );
   //console.log("   arr= " + arr + ";" );
   //console.log("   v= " + v + ";" );
-  console.log("   объявление переменных" )
-  console.log("   set и let" );
+  
+  
+  
+  console.log('_'.repeat(64) )
+  console.log("   Объявление переменных" )
+  console.log("   (set и let)" );
   var a = 12; //доступна глобально
   function myFunction()
   {
@@ -121,6 +130,9 @@ Template.rndom.events({
   }
   
   myFunction();
+  
+  
+  console.log('_'.repeat(64) )
   
 	// console.log('c='+c) //Uncaught ReferenceError: c is not defined
   
