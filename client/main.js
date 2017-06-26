@@ -71,11 +71,16 @@ Template.rndom.helpers({
   },
 });
 
+
+
 Template.rndom.events({
   'click button'(event, instance) {
     // increment the counter when button is clicked
 
-  console.log('_'.repeat(64) )
+	Nrepeat=28	
+//====================================================
+	
+  console.log('_'.repeat(Nrepeat) )
   console.log("   Сумма N вещ случ чисел от -1 до +1" )
   console.log("   (N:  сл число от 1 до 1000)" );
 	
@@ -97,8 +102,12 @@ Template.rndom.events({
  i=i-1;
  console.log(i + "] " + result + ";" );
  
- 
- 
+ //==================================================
+   
+  console.log('_'.repeat(Nrepeat) )
+  console.log("   деструктуризация" )
+  console.log("   и метод repeat" );
+  
   let arr = [" hello!", 5]; // let
   let [str, times] = arr; // деструктуризация
   v=str.repeat(times);//  метод repeat
@@ -109,9 +118,9 @@ Template.rndom.events({
   //console.log("   arr= " + arr + ";" );
   //console.log("   v= " + v + ";" );
   
+//====================================================  
   
-  
-  console.log('_'.repeat(64) )
+  console.log('_'.repeat(Nrepeat) )
   console.log("   Объявление переменных" )
   console.log("   (set и let)" );
   var a = 12; //доступна глобально
@@ -130,11 +139,22 @@ Template.rndom.events({
   }
   
   myFunction();
+  // console.log('c='+c) //Uncaught ReferenceError: c is not defined
+  
+//====================================================  
+  
+  console.log('_'.repeat(Nrepeat) )
+  console.log("   Значения параметров по умолчанию" ) 
+  
+	function myFunction(х = 1 , у = 2, z = 3)
+	{console.log(х, у, z ) ; // Выведет "6 7 3"
+	}
+	myFunction(6,7);
   
   
-  console.log('_'.repeat(64) )
   
-	// console.log('c='+c) //Uncaught ReferenceError: c is not defined
   
+//====================================================   
+  console.log('_'.repeat(Nrepeat) )  
   } 
 });
