@@ -5,18 +5,18 @@ Template.tryES6.events({
     // increment the counter when button is clicked
 
 	Nrepeat=28	
-//====================================================
-	
-  console.log('='.repeat(Nrepeat) )
-  console.log("   Сумма N вещ случ чисел от -1 до +1" )
-  console.log("   (N:  сл число от 1 до 1000)" );
+	console.log('='.repeat(Nrepeat) )
+  
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("Сумма N вещ случ чисел от -1 до +1" )
+console.log("(N:  сл число от 1 до 1000)" );
 	
 	function sg(x)
-{   if (x >= 0.5)
-        return 1;
-    else
-        return -1;
-}
+	{if (x >= 0.5)
+			return 1;
+	 else
+			return -1;
+	}
 	
 	 var i=0;
 	 var result=0.0;
@@ -25,31 +25,29 @@ Template.tryES6.events({
 	result = sg(Random.fraction()) * Random.fraction() + result;
 	//console.log(i + "] " + result + ";" );
 		instance.counter.set(result);
- };
- i=i-1;
- console.log(i + "] " + result + ";" );
- 
- //==================================================
-   
-  console.log('_'.repeat(Nrepeat) )
-  console.log("   деструктуризация" )
-  console.log("   и метод repeat" );
+	};
+	i=i-1;
+	console.log(i + "] " + result + ";" );
+console.log('_'.repeat(Nrepeat) )
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("Деструктуризация" )
+console.log("и метод repeat" );
   
   let arr = [" hello!", 5]; // let
   let [str, times] = arr; // деструктуризация
   v=str.repeat(times);//  метод repeat
   console.log("v=str.repeat(times)=" + v + ";" )
-  alert( v ); 
+	//------------------//  
+	//  alert( v );     //
+	//------------------// 
   let rf=Random.fraction()
   //document.write(i + "]   " + result + ";" );
   //console.log(   i + "]   " + result + ";" );
   //console.log("   arr= " + arr + ";" );
-  
-//====================================================  
-  
-  console.log('_'.repeat(Nrepeat) )
-  console.log("   Объявление переменных" )
-  console.log("   (set и let)" );
+console.log('_'.repeat(Nrepeat) )
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("Объявление переменных" )
+console.log("(set и let)" );
   var a = 12; //доступна глобально
   function myFunction4()
   {
@@ -64,14 +62,11 @@ Template.tryES6.events({
 	  }  
 		  console.log('c='+c+' - доступна в пределах функции')
   }
-  
   myFunction4();
   // console.log('c='+c) //Uncaught ReferenceError: c is not defined
-  
-//====================================================  
-  
-  console.log('_'.repeat(Nrepeat) )
-  console.log("   Значения параметров по умолчанию" ) 
+console.log('_'.repeat(Nrepeat) )
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("Значения параметров по умолчанию" ) 
   
 	function myFunction1(х = 1 , у = 2, z = 3)
 	{console.log(х, у, z ) ; // Выведет "6 7 3"
@@ -91,49 +86,37 @@ Template.tryES6.events({
 	}
 	myFunction3(6,7); 
   //-----------------------
-  console.log('_'.repeat(Nrepeat) )
-  
-//====================================================  
-//Оператор расширения записывается как «...».
-// разбивает итерируемые объекты на отдельные значения.
-{
-	console.log("   Оператор расширения" )
+console.log('_'.repeat(Nrepeat) )
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("Оператор расширения" )
+	{
 	function myFunction5(x, y)
 	{
 	return x + y;
 	}
 	let dta = [1, 4 ] ;
+	//Оператор расширения записывается как «...».
+	// разбивает итерируемые объекты на отдельные значения.
 	let res = myFunction5(...dta);
 	console.log(res); // Выведет "5"
-}
-	console.log('_'.repeat(Nrepeat) ) 
-
-//====================================================  
-//Определение значений массива как части другого
-//массива
-	console.log("   Определение значений массива как части другого массива")
+	}
+console.log('_'.repeat(Nrepeat) ) 
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("Определение значений массива как части другого массива")
 	let arrayl = [2,3,4];
 	let array2 = [1, ...arrayl, 5, 6, 7 ] ;
 	console.log(array2); // Выведет "1, 2, 3, 4, 5, 6, 7"
-
-    console.log('_'.repeat(Nrepeat) )
-	
-//====================================================  
-// Копирование значений из одного массива в другой
-
-	console.log("   Копирование значений из одного массива в другой");
+console.log('_'.repeat(Nrepeat) )
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("Копирование значений из одного массива в другой");
 	let array3 = [2,3,4];
 	let array4 = [1];
 	array4.push(...array3);
 	console.log(array4); // Выведет "1, 2, 3, 4"	
-	
-	console.log('_'.repeat(Nrepeat)) 	
-
-//====================================================  	
-// Расширение нескольких массивов	
-	console.log("   Расширение нескольких массивов");
+console.log('_'.repeat(Nrepeat)) 	
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  	
+console.log("Расширение нескольких массивов");
 	{
-
 	function myFunction(a, b, c, d, e)
 	{
 	return a+b+c+d+e;
@@ -149,23 +132,18 @@ Template.tryES6.events({
 	let result = myFunction(...аrrаy3, ...array4); // несколько массивов
 	console.log(result); // Выведет "15"
 	}	
-	console.log('_'.repeat(Nrepeat))
-
-//====================================================  	
-// Дополнительные, или необязательные параметры
-	console.log("   Дополнительные, или необязательные параметры");
+console.log('_'.repeat(Nrepeat))
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  	
+console.log("Дополнительные, или необязательные параметры");
 	{
 	function myFunction(a, b, ...args)
 		{console.log(args); // Выведет "3, 4, 5"
 		}
 	myFunction(1, 2, 3, 4, 5 ) ;
 	}
-	
-	console.log('_'.repeat(Nrepeat))
-	
-//====================================================  	
-// Деструктивное присваивание массивов 
-	console.log("   Деструктивное присваивание массивов ");
+console.log('_'.repeat(Nrepeat))
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  	
+console.log("Деструктивное присваивание массивов ");
 	{	
 	let myArray = [1, 2, 3, 4, 5, 6] ;
 	let [a, b, c] = myArray; // синтаксис деструктивного
@@ -179,62 +157,105 @@ Template.tryES6.events({
 	console.log('c='+c);
 	}
 	console.log('_'.repeat(Nrepeat))
-	
-//====================================================  	
-// Иигнорировать некоторые значения в
-// итерируемом объекте
-	console.log("   Игнорирование значений");
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  	
+console.log("Игнорирование значений");
 	{	
 	let [а, , b] = [1, 2, 3 ] ;
 	console.log(а)
 	console.log(b)
 	}
-	console.log('_'.repeat(Nrepeat))
-
-//====================================================  	
-// Использование оператора расширения
-// в деструктивном присваивании массивов
-	console.log("   Использование деструктивного присваивания массива");
+console.log('_'.repeat(Nrepeat))
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  	
+console.log("Использование деструктивного присваивания массива");
 	{
 	let [a, ...b] = [1, 2, 3, 4, 5, 6] ;
 	console.log(a);
 	console.log(Array.isArray(b));
 	console.log(b);	
 	}
-	console.log('_'.repeat(Nrepeat))
-	
-//====================================================  		
-// С помощью оператора дополнения можно
-// проигнорировать значения. 
-	console.log("   Игнорирование значений c помощью оператора дополнения");
+console.log('_'.repeat(Nrepeat))
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  		
+console.log("Игнорирование значений c помощью оператора дополнения");
 	{
 	let [a, , ,...b] = [1, 2, 3, 4, 5, 6] ;
 	console.log(a);   // 1
 	console.log(b);   // 4 ,5, 6	
 	}
-	console.log('_'.repeat(Nrepeat))	
-	
-//====================================================  		
-// Значения по умолчанию для переменных
-
-	console.log("   Значения по умолчанию для переменных");
+console.log('_'.repeat(Nrepeat))	
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  		
+console.log("Значения по умолчанию для переменных");
 	{
 	let [a, b, c = 3] = [1, 2] ;
 	console.log(a,b,c); // Выведет "1,2,3"
 	}
-	console.log('_'.repeat(Nrepeat))
-	
-//====================================================  		
-// Деструктивное присваивание вложенных массивов
+console.log('_'.repeat(Nrepeat))
 
-	console.log("   Деструктивное присваивание вложенных массивов");
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  		
+console.log("Деструктивное присваивание вложенных массивов");
 	{
 	let [a, b, [c, d] ] = [1, 2, [3, 4]]; 
 	console.log(a, b, [c, d]); // Выведет 1,2,[3,4]
 	}
-	console.log('_'.repeat(Nrepeat))		
+console.log('_'.repeat(Nrepeat))		
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  		
+console.log("Использование деструктивного присваивания в качестве параметра функции");
+	{
+	function myFunction([a, b, с = 3])
+	{
+	console.log(a, b, с ) ; // Выведет "1 2 3"
+	}
+	myFunction([1, 2 ] ) ;
+	}
+console.log('_'.repeat(Nrepeat))	
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   
+console.log("В качестве значения по умолчанию можно указать массив, который будет использован, если аргумент получит значение undefined")
+{
+	function myFunction([a, b, с = 3] = [1, 2, 3])
+	{
+	console.log(a, b, с ) ; // Выведет "1 2 3"
+	}
+	myFunction (undefined) ;
+}
+console.log('_'.repeat(Nrepeat))
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓   
+console.log("Деструктивное присваивание объектов для выделения и присваивания их свойств переменным")
+{
+	{
+	let object = {"name" : "John", "age" : 23};
+	let name, age;
+	({name, age} = object); // синтаксис деструктивного
+							// присваивания объектов
+/* В левую часть оператора деструктивного присваивания долж
+ны быть помещены переменные для присваивания свойств объекта.
+В правую часть - объект, свойства которого мы хотим извлечь, а за
+тем, обернуть всю инструкцию круглыми скобками (). */
+	console.log(object)
+	console.log(name)	
+	console.log(age)
+	}
+	
+	console.log('		или')
+	
+	{
+	let object = {"name" : "Jack", "age" : 43};
+	let {name: x, age: y} = {"name" : "Jack", "age" : 43};
+	/* 	Нам не нужно заключать оператор
+	в круглые скобки (), так как переменные
+	создаются в том же операторе. */
+	console.log(object)
+	console.log(x)
+	console.log(y)
+	}
+}
+console.log('_'.repeat(Nrepeat))
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("")
+{
 
-//====================================================   
-	console.log('='.repeat(Nrepeat) )  
+}
+console.log('_'.repeat(Nrepeat))
+//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log('='.repeat(Nrepeat) )  
   }
   }); 
+  
