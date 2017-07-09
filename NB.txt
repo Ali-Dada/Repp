@@ -63,3 +63,199 @@ $
 
 =======================================
 
+Microsoft Windows [Version 6.1.7601]
+(c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
+
+C:\Users\user>cd /
+
+
+C:\>cd Amrija
+
+C:\Amrija>meteor list
+blaze-html-templates              1.1.2  Compile HTML templates into rea...
+ecmascript                        0.8.1  Compiler plugin that supports E...
+es5-shim                          4.6.15  Shims and polyfills to improve...
+johanbrook:publication-collector  1.0.8* Test a Meteor publication by co...
+kadira:blaze-layout               2.3.0  Layout Manager for Blaze (works...
+kadira:flow-router                2.12.1  Carefully Designed Client Side...
+less                              2.7.9  Leaner CSS language
+meteor-base                       1.1.0  Packages that every Meteor app ...
+mobile-experience                 1.0.4  Packages for a great mobile use...
+mongo                             1.1.18  Adaptor for using MongoDB and ...
+practicalmeteor:mocha             2.4.5_6  Write package tests with moch...
+reactive-var                      1.0.11  Reactive variable
+standard-minifier-css             1.3.4  Standard css minifier used with...
+standard-minifier-js              2.1.0  Standard javascript minifiers u...
+tracker                           1.1.3  Dependency tracker to allow rea...
+
+
+* New versions of these packages are available! Run 'meteor update' to try
+  to update those packages to their latest versions. If your packages
+  cannot be updated further, try typing
+  `meteor add <package>@<newVersion>` to see more information.
+
+C:\Amrija>meteor mongo
+2017-07-02T09:50:41.339+0300 I CONTROL  [main] Hotfix KB2731284 or later update
+is not installed, will zero-out data files
+MongoDB shell version: 3.2.12
+connecting to: 127.0.0.1:5001/meteor
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+Questions? Try the support group
+        http://groups.google.com/group/mongodb-user
+Server has startup warnings:
+2017-06-29T16:47:24.365+0300 I CONTROL  [initandlisten]
+2017-06-29T16:47:24.365+0300 I CONTROL  [initandlisten] ** WARNING: This 32-bit
+MongoDB binary is deprecated
+2017-06-29T16:47:24.365+0300 I CONTROL  [initandlisten] ** NOTE: This is a 32-bi
+t MongoDB binary running on a 64-bit operating
+2017-06-29T16:47:24.366+0300 I CONTROL  [initandlisten] **      system. Switch t
+o a 64-bit build of MongoDB to
+2017-06-29T16:47:24.366+0300 I CONTROL  [initandlisten] **      support larger d
+atabases.
+2017-06-29T16:47:24.366+0300 I CONTROL  [initandlisten]
+2017-06-29T16:47:24.367+0300 I CONTROL  [initandlisten]
+2017-06-29T16:47:24.367+0300 I CONTROL  [initandlisten] ** NOTE: This is a 32 bi
+t MongoDB binary.
+2017-06-29T16:47:24.367+0300 I CONTROL  [initandlisten] **       32 bit builds a
+re limited to less than 2GB of data (or less with --journal).
+2017-06-29T16:47:24.367+0300 I CONTROL  [initandlisten] **       Note that journ
+aling defaults to off for 32 bit and is currently off.
+2017-06-29T16:47:24.367+0300 I CONTROL  [initandlisten] **       See http://doch
+ub.mongodb.org/core/32bit
+2017-06-29T16:47:24.368+0300 I CONTROL  [initandlisten]
+meteor:PRIMARY>
+
+================================================
+
+
+http://blog.dragn.me/2015/07/06/Store-files-to-GridFS-in-Meteor-app/
+
+
+6 ИЮЛЯ 2015 Г.
+Хранить файлы в GridFS в приложении Meteor
+Задний план
+
+Недавно я начал новый проект на основе Meteor, который включает в себя возможность для пользователей сохранять свои собственные изображения в облаке. Я рассмотрел несколько вариантов для этого, от хранения до локальной FS до Amazon S3. В конце концов я решил, что было бы удобно хранить файлы в GridFS Mongo. Мне все равно нужен кластер Mongo, так почему бы и не хранить там файлы. 
+Но оказалось, что в Meteor для GridFS нет встроенной поддержки.
+
+Существует множество плагинов, из которых наибольшая из них - сбор файлов и коллекция-fs . Я решил не использовать ни одного из них, потому что они вроде бы слишком много делают для меня, например, добавляют функции загрузки HTTP. CollectionFS - это большой набор плагинов на самом деле, который пытается многое сделать (но, к примеру, не очень хорошо сочетается с последним плагином Meteor и плагином проверки аудита). 
+Итак, через некоторое время я наткнулся на этот ответ StackOverflow , который дал мне представление о том, как быстро реализовать хранилище на базе GridFS.
+
+Meteor Hack
+
+Я использую следующий код в Meteor 1.1.0.2, не все здесь является частью публичного API, поэтому он может не работать для других версий. 
+Чтобы все было просто, я решил просто использовать драйвер Node.js от Mongo, который используется внутри самого Meteor.
+
+
+
+
+
+// Access GridStore API
+var GridStore = MongoInternals.NpmModule.GridStore;
+
+// Access default mongo database
+var db = MongoInternals.defaultRemoteCollectionDriver().mongo.db;
+
+// Reading file from the GridFS by filename
+new GridStore(db, filename, 'r').open(Meteor.bindEnvironment(function(err, gridStore) {
+    var stream = gridStore.stream();
+    // .. do something with stream
+}));
+
+// Writing data to GridFS
+new GridStore(db, filename, 'w').open(Meteor.bindEnvironment(function(err, gridStore) {
+    // Write string or buffer data to file
+    gridStore.write(data, true, function(err, doc) { /* ... */ });
+
+    // Or write local FS file
+    gridStore.writeFile(localname, function(err, doc) { /* ... */ });
+}));
+
+
+
+
+Странно, что GridStore API не предоставляет способ получить файл с идентификатором, но только с именем файла, которое может быть не уникальным. Поэтому вы должны заботиться о уникальности имени файла (возможно, используя некоторые комбинации ObjectID).
+
+
+
+
+C:\Amrija>meteor add msavin:mongol
+
+Changes to your project's package version selections:
+
+meteortoys:toykit  added, version 4.0.1
+msavin:mongol      added, version 4.0.1
+session            added, version 1.1.7
+
+
+msavin:mongol: In-App MongoDB Editor.. now with improved third party
+package compatibility.
+
+
+
+
+C:\Amrija>meteor list
+blaze-html-templates              1.1.2  Compile HTML templates into rea...
+ecmascript                        0.8.1  Compiler plugin that supports E...
+es5-shim                          4.6.15  Shims and polyfills to improve...
+johanbrook:publication-collector  1.0.8* Test a Meteor publication by co...
+kadira:blaze-layout               2.3.0  Layout Manager for Blaze (works...
+kadira:flow-router                2.12.1  Carefully Designed Client Side...
+less                              2.7.9  Leaner CSS language
+meteor-base                       1.1.0  Packages that every Meteor app ...
+mobile-experience                 1.0.4  Packages for a great mobile use...
+mongo                             1.1.18  Adaptor for using MongoDB and ...
+msavin:mongol                     4.0.1  In-App MongoDB Editor.. now wit...
+practicalmeteor:mocha             2.4.5_6  Write package tests with moch...
+reactive-var                      1.0.11  Reactive variable
+standard-minifier-css             1.3.4  Standard css minifier used with...
+standard-minifier-js              2.1.0  Standard javascript minifiers u...
+tracker                           1.1.3  Dependency tracker to allow rea...
+
+
+* New versions of these packages are available! Run 'meteor update' to try
+  to update those packages to their latest versions. If your packages
+  cannot be updated further, try typing
+  `meteor add <package>@<newVersion>` to see more information.
+
+
+ Jebin B V - Mastering MeteorJS Application Development 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Название: Mastering MeteorJS Application Development (+code)
+Автор: Jebin B V
+Издательство: Packt Publishing
+Год: 2015
+Формат: PDF, EPUB
+Размер: 137,9 Мб 
+Язык: английский / English
+
+Mastering MeteorJS Application Development shows you how to do even more with MeteorJS – if you're ready to try a comprehensive course through one of the most exciting frameworks in web development today, this is the book you need.
+
+You'll not only learn how MeteorJS makes Web development easier, but also how you can make using MeteorJS easier by automating and simplifying tasks so you can be confident you have full control of everything in your workflow – especially everything that could go wrong. With further insights on developing for mobile – and how MeteorJS can help you tackle the challenges of the trend – and details on incorporating SEO strategies into your application, this book isn't just a code tutorial – it's about creating a product that users love.
+===========================================================
+
+
+https://zaxor.gitbooks.io/angular-meteor-md/20.handling%20files%20with%20collectionFS.html
+-- На этом этапе мы добавим возможность загружать изображения в наше приложение, а также сортировать и называть их.
+
+https://atmospherejs.com/msavin/mongol
+-- In-App MongoDB Editor.. now with improved third party package compatibility.
+
+https://medium.com/@victorleungtw/how-to-upload-files-with-meteor-js-7b8e811510fa
+-- How to upload files with Meteor.js?
+
+http://mongodb.github.io/node-mongodb-native/2.0/api-docs/
+-- Node.js MongoDB Driver API
+-- API-интерфейс драйвера Node.js MongoDB
+
+http://www.ru.w3eacademy.com/mongodb/mongodb_gridfs.htm
+-- GridFS является спецификация MongoDB для хранения и извлечения больших файлов , таких как изображения, аудио файлы, видео файлы и т.д. 
+
+https://www.meteor.com/tutorials
+-- УЧЕБНИКИ Создание простого приложения в считанные минуты. Мастер 
+передовых концепций и методов.
+
+

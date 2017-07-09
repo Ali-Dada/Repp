@@ -1,0 +1,881 @@
+Windows PowerShell
+(C) Корпорация Майкрософт, 2009. Все права защищены.
+
+ПРЕДУПРЕЖДЕНИЕ: posh-git support for PowerShell 2.0 is deprecated; you have
+version 2.0.
+To download version 5.0, please visit
+https://www.microsoft.com/en-us/download/details.aspx?id=50395
+For more information and to discuss this, please visit
+https://github.com/dahlbyk/posh-git/issues/163
+To suppress this warning, change your profile to include 'Import-Module
+posh-git -Args $true'.
+Identity added: /c/Users/user/.ssh/id_rsa (/c/Users/user/.ssh/id_rsa)
+~\Documents\GitHub [master +22 ~0 -0 !]> git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_rege
+x]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, com
+mand line)
+
+==========================================================================
+
+~\Documents\GitHub [master +22 ~0 -0 !]> git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+rebase.autosquash=true
+alias.c=commit
+alias.co=checkout
+alias.dt=difftool
+alias.mt=mergetool
+alias.praise=blame
+alias.ff=merge --ff-only
+alias.st=status
+alias.sync=!git pull && git push
+apply.whitespace=nowarn
+core.symlinks=false
+core.autocrlf=true
+core.editor=gitpad
+core.preloadindex=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+color.ui=true
+pack.packsizelimit=2g
+help.format=html
+http.sslcainfo=/ssl/certs/ca-bundle-ghfw.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+credential.helper=!github --credentials
+filter.ghcleansmudge.clean=cat
+filter.ghcleansmudge.smudge=cat
+push.default=upstream
+diff.tool=vs2013
+diff.algorithm=histogram
+difftool.prompt=false
+difftool.bc4.cmd="c:/program files (x86)/beyond compare 3/bcomp.exe" "$LOCAL" "$
+REMOTE"
+difftool.p4.cmd="c:/program files/Perforce/p4merge.exe" "$LOCAL" "$REMOTE"
+difftool.vs2012.cmd="c:/program files (x86)/microsoft visual studio 11.0/common7
+/ide/devenv.exe" '//diff' "$LOCAL" "$REMOTE"
+difftool.vs2013.cmd="c:/program files (x86)/microsoft visual studio 12.0/common7
+/ide/devenv.exe" '//diff' "$LOCAL" "$REMOTE"
+merge.tool=bc3
+mergetool.prompt=false
+mergetool.keepbackup=false
+mergetool.bc3.cmd="c:/program files (x86)/beyond compare 3/bcomp.exe" "$LOCAL" "
+$REMOTE" "$BASE" "$MERGED"
+mergetool.bc3.trustexitcode=true
+mergetool.p4.cmd="c:/program files/Perforce/p4merge.exe" "$BASE" "$LOCAL" "$REMO
+TE" "$MERGED"
+mergetool.p4.trustexitcode=false
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+gui.wmstate=normal
+gui.geometry=1109x563+90+90 216 255
+
+=============================================================
+
+~\Documents\GitHub [master +22 ~0 -0 !]> git config --global user.name "Ali-Dada
+"
+~\Documents\GitHub [master +23 ~0 -0 !]> git config --global user.email alidada@
+yahoo.com
+~\Documents\GitHub [master +23 ~0 -0 !]> git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+rebase.autosquash=true
+alias.c=commit
+alias.co=checkout
+alias.dt=difftool
+alias.mt=mergetool
+alias.praise=blame
+alias.ff=merge --ff-only
+alias.st=status
+alias.sync=!git pull && git push
+apply.whitespace=nowarn
+core.symlinks=false
+core.autocrlf=true
+core.editor=gitpad
+core.preloadindex=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+color.ui=true
+pack.packsizelimit=2g
+help.format=html
+http.sslcainfo=/ssl/certs/ca-bundle-ghfw.crt
+diff.astextplain.textconv=astextplain
+rebase.autosquash=true
+credential.helper=!github --credentials
+filter.ghcleansmudge.clean=cat
+filter.ghcleansmudge.smudge=cat
+push.default=upstream
+diff.tool=vs2013
+diff.algorithm=histogram
+difftool.prompt=false
+difftool.bc4.cmd="c:/program files (x86)/beyond compare 3/bcomp.exe" "$LOCAL" "$
+REMOTE"
+difftool.p4.cmd="c:/program files/Perforce/p4merge.exe" "$LOCAL" "$REMOTE"
+difftool.vs2012.cmd="c:/program files (x86)/microsoft visual studio 11.0/common7
+/ide/devenv.exe" '//diff' "$LOCAL" "$REMOTE"
+difftool.vs2013.cmd="c:/program files (x86)/microsoft visual studio 12.0/common7
+/ide/devenv.exe" '//diff' "$LOCAL" "$REMOTE"
+merge.tool=bc3
+mergetool.prompt=false
+mergetool.keepbackup=false
+mergetool.bc3.cmd="c:/program files (x86)/beyond compare 3/bcomp.exe" "$LOCAL" "
+$REMOTE" "$BASE" "$MERGED"
+mergetool.bc3.trustexitcode=true
+mergetool.p4.cmd="c:/program files/Perforce/p4merge.exe" "$BASE" "$LOCAL" "$REMO
+TE" "$MERGED"
+mergetool.p4.trustexitcode=false
+user.name=Ali-Dada
+user.email=alidada@yahoo.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+gui.wmstate=normal
+gui.geometry=1109x563+90+90 216 255
+
+=============================================================================
+
+~\Documents\GitHub [master +23 ~0 -0 !]> git config user.name
+Ali-Dada
+
+=============================================================================
+
+~\Documents\GitHub [master +23 ~0 -0 !]> git help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+=============================================================================
+
+~\Documents\GitHub [master +23 ~0 -0 !]> git help -g
+The common Git guides are:
+
+   attributes   Defining attributes per path
+   everyday     Everyday Git With 20 Commands Or So
+   glossary     A Git glossary
+   ignore       Specifies intentionally untracked files to ignore
+   modules      Defining submodule properties
+   revisions    Specifying revisions and ranges for Git
+   tutorial     A tutorial introduction to Git (for version 1.5.1 or newer)
+   workflows    An overview of recommended workflows with Git
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+=============================================================================
+
+~\Documents\GitHub [master +23 ~0 -0 !]> git help -a
+
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+available git commands in 'C:\Users\user\AppData\Local\GitHub\PortableGit_f02737
+a78695063deace08e96d5042710d3e32db\mingw32/libexec/git-core'
+
+  add                 fsck-objects        rebase
+  add--interactive    gc                  rebase--helper
+  am                  get-tar-commit-id   receive-pack
+  annotate            grep                reflog
+  apply               gui                 relink
+  archimport          gui--askpass        remote
+  archive             gui--askyesno       remote-ext
+  askpass             gui.tcl             remote-fd
+  bisect              hash-object         remote-ftp
+  bisect--helper      help                remote-ftps
+  blame               http-backend        remote-http
+  branch              http-fetch          remote-https
+  bundle              http-push           repack
+  cat-file            imap-send           replace
+  check-attr          index-pack          request-pull
+  check-ignore        init                rerere
+  check-mailmap       init-db             reset
+  check-ref-format    instaweb            rev-list
+  checkout            interpret-trailers  rev-parse
+  checkout-index      legacy-difftool     revert
+  cherry              log                 rm
+  cherry-pick         ls-files            send-email
+  citool              ls-remote           send-pack
+  clean               ls-tree             sh-i18n--envsubst
+  clone               mailinfo            shortlog
+  column              mailsplit           show
+  commit              merge               show-branch
+  commit-tree         merge-base          show-index
+  config              merge-file          show-ref
+  count-objects       merge-index         stage
+  credential          merge-octopus       stash
+  credential-manager  merge-one-file      status
+  credential-store    merge-ours          stripspace
+  credential-wincred  merge-recursive     submodule
+  cvsexportcommit     merge-resolve       submodule--helper
+  cvsimport           merge-subtree       subtree
+  cvsserver           merge-tree          svn
+  daemon              mergetool           symbolic-ref
+  describe            mktag               tag
+  diff                mktree              unpack-file
+  diff-files          mv                  unpack-objects
+  diff-index          name-rev            update-index
+  diff-tree           notes               update-ref
+  difftool            p4                  update-server-info
+  difftool--helper    pack-objects        upload-archive
+  fast-export         pack-redundant      upload-pack
+  fast-import         pack-refs           var
+  fetch               patch-id            verify-commit
+  fetch-pack          prune               verify-pack
+  filter-branch       prune-packed        verify-tag
+  fmt-merge-msg       pull                web--browse
+  for-each-ref        push                whatchanged
+  format-patch        quiltimport         worktree
+  fsck                read-tree           write-tree
+
+git commands available from elsewhere on your $PATH
+
+  flow  lfs   tfs
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+=============================================================================
+
+~\Documents\GitHub [master +23 ~0 -0 !]> git help -g
+The common Git guides are:
+
+   attributes   Defining attributes per path
+   everyday     Everyday Git With 20 Commands Or So
+   glossary     A Git glossary
+   ignore       Specifies intentionally untracked files to ignore
+   modules      Defining submodule properties
+   revisions    Specifying revisions and ranges for Git
+   tutorial     A tutorial introduction to Git (for version 1.5.1 or newer)
+   workflows    An overview of recommended workflows with Git
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+=============================================================================
+
+~\Documents\GitHub [master +23 ~0 -0 !]> d:
+
+=============================================================================
+
+D:\> dir
+
+
+    Каталог: D:\
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+d----        19.06.2017     21:51            000
+d----        15.04.2016     11:33            Audio
+d----        11.06.2015     20:43            Crack
+d----        20.03.2014     12:08            IDE
+d----        25.02.2017     20:48            ins
+d----        21.06.2017      0:28            JGS
+d----        26.11.2015     19:44            Langsam gesprochene Nachrichten
+d----        22.06.2017      9:31            meteor
+d----        30.04.2017     23:12            NNN
+d----        02.04.2014     15:47            ProcessExplorer
+d----        22.06.2017      0:32            Repp
+d----        25.02.2016     21:22            TOR
+d----        20.03.2014     12:09            Total CMD
+d----        06.10.2015     21:55            VOA
+d----        23.03.2017     23:39            Wenninger
+d----        30.04.2016     16:49            `Chinese
+d----        03.06.2017     13:03            `V
+d----        22.02.2017     21:25            ~
+-a---        20.03.2016     15:59        103 йцукен.txt
+
+=============================================================================
+
+D:\> cd meteor
+D:\meteor> cd 2d-1
+D:\meteor\2d-1>
+
+=============================================================================
+
+D:\meteor\2d-1> git init
+Initialized empty Git repository in D:/meteor/2d-1/.git/
+
+=============================================================================
+
+d:\meteor\2d-1\.git
+
+Общий размер файлов:
+15 787 байт.
+Всего файлов - 14,
+каталогов - 8.
+
+(= 15Кб)
+
+Фактически занимают на источнике
+(с учётом размера кластеров):
+61 440 байт.
+
+
+============================================================================
+
+D:\meteor\2d-1 [master +6 ~0 -0 !]> git add -n client/*.*
+warning: LF will be replaced by CRLF in client/main.html.
+The file will have its original line endings in your working directory.
+add 'client/client.rar'
+add 'client/main.html'
+add 'client/main.js'
+warning: LF will be replaced by CRLF in client/main.js.
+The file will have its original line endings in your working directory.
+
+===========================================================================
+
+D:\meteor\2d-1 [master +6 ~0 -0 !]> git add client/*.*
+warning: LF will be replaced by CRLF in client/main.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in client/main.js.
+The file will have its original line endings in your working directory.
+
+===========================================================================
+
+D:\meteor\2d-1 [master +3 ~0 -0 | +5 ~0 -0 !]> git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   client/client.rar
+        new file:   client/main.html
+        new file:   client/main.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .meteor/
+        NB.txt
+        node_modules/
+        package.json
+        server/
+
+============================================================================
+
+D:\meteor\2d-1 [master +3 ~0 -0 | +5 ~0 -0 !]> git add NB.txt
+D:\meteor\2d-1 [master +4 ~0 -0 | +4 ~0 -0 !]> git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   NB.txt
+        new file:   client/client.rar
+        new file:   client/main.html
+        new file:   client/main.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .meteor/
+        node_modules/
+        package.json
+        server/
+
+============================================================================
+
+D:\meteor\2d-1 [master +4 ~0 -0 | +4 ~1 -0 !]> git rm --cached client/client.rar
+
+rm 'client/client.rar'
+
+============================================================================
+
+git status
+
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   NB.txt
+        new file:   client/main.html
+        new file:   client/main.js
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   NB.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        .meteor/
+        package.json
+        server/
+
+=============================================================================
+
+D:\meteor\2d-1 [master +3 ~0 -0 | +4 ~1 -0 !]> git commit -m "first version of 2
+d named 2d-1. begin with git"
+[master (root-commit) f4bf563] first version of 2d named 2d-1. begin with git
+ 3 files changed, 579 insertions(+)
+ create mode 100644 NB.txt
+ create mode 100644 client/main.html
+ create mode 100644 client/main.js
+
+=============================================================================
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git commit -a -m "set auto add on"
+[master aa9ab51] set auto add on
+ 1 file changed, 111 insertions(+)
+:git commit -m "first version of 2d named 2d-1. begin with git"
+
+=============================================================================
+
+D:\meteor\2d-1 [master +4 ~0 -0 !]> git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        .meteor/
+        package.json
+        server/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+=============================================================================
+
+D:\meteor\2d-1 [master +4 ~0 -0 !]> git commit -a -m "set auto add on1"
+[master 98ef0ce] set auto add on1
+ 1 file changed, 21 insertions(+)
+:
+D:\meteor\2d-1 [master +4 ~0 -0 !]> git commit -a -m -v "set auto add on2"
+fatal: Paths with -a does not make sense.
+
+=============================================================================
+
+D:\meteor\2d-1 [master +4 ~0 -0 !]> git log
+commit 98ef0ce690a9a67f9537ece731d2fe126df157cc
+Author: Ali-Dada <alidada@yahoo.com>
+Date:   Thu Jun 22 14:38:53 2017 +0300
+
+    set auto add on1
+
+commit aa9ab5187ff0e459f875a77263458f89e9c50748
+Author: Ali-Dada <alidada@yahoo.com>
+Date:   Thu Jun 22 14:35:57 2017 +0300
+
+    set auto add on
+
+commit f4bf563027e44bb357aad2e3af21dd2f077bd826
+Author: Ali-Dada <alidada@yahoo.com>
+Date:   Thu Jun 22 14:28:23 2017 +0300
+
+    first version of 2d named 2d-1. begin with git
+
+=============================================================================
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> gitk
+
+=============================================================================
+=============================================================================
+=============================================================================
+
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git remote add 2d1 https://github.com/Ali-Da
+da/Repp/projects/1
+:
+:
+ ESC[D
+
+diff --git a/NB.txt b/NB.txt
+index 84611c8..fe5f177 100644
+--- a/NB.txt
++++ b/NB.txt
+@@ -419,3 +419,70 @@ d:\meteor\2d-1\.git
+
+ ============================================================================
+
++D:\meteor\2d-1 [master +6 ~0 -0 !]> git add -n client/*.*
++warning: LF will be replaced by CRLF in client/main.html.
++The file will have its original line endings in your working directory.
++add 'client/client.rar'
++add 'client/main.html'
++add 'client/main.js'
++warning: LF will be replaced by CRLF in client/main.js.
++The file will have its original line endings in your working directory.
++
++===========================================================================
++
++D:\meteor\2d-1 [master +6 ~0 -0 !]> git add client/*.*
++warning: LF will be replaced by CRLF in client/main.html.
++The file will have its original line endings in your working directory.
++warning: LF will be replaced by CRLF in client/main.js.
++The file will have its original line endings in your working directory.
++
++===========================================================================
++
++D:\meteor\2d-1 [master +3 ~0 -0 | +5 ~0 -0 !]> git status
++On branch master
++
++Initial commit
++
++Changes to be committed:
++  (use "git rm --cached <file>..." to unstage)
++
++        new file:   client/client.rar
+ ESC[D
+
+commit 98ef0ce690a9a67f9537ece731d2fe126df157cc
+Author: Ali-Dada <alidada@yahoo.com>
+Date:   Thu Jun 22 14:38:53 2017 +0300
+
+    set auto add on1
+
+diff --git a/NB.txt b/NB.txt
+index aae4fd9..a6eb187 100644
+--- a/NB.txt
++++ b/NB.txt
+@@ -530,3 +530,24 @@ d named 2d-1. begin with git"
+
+ =============================================================================
+
++D:\meteor\2d-1 [master +4 ~1 -0 !]> git commit -a -m "set auto add on"
++[master aa9ab51] set auto add on
++ 1 file changed, 111 insertions(+)
++:git commit -m "first version of 2d named 2d-1. begin with git"
++
++=============================================================================
++
++D:\meteor\2d-1 [master +4 ~0 -0 !]> git status
++On branch master
++Untracked files:
++  (use "git add <file>..." to include in what will be committed)
++
++        .gitignore
++        .meteor/
++        package.json
++        server/
++
++nothing added to commit but untracked files present (use "git add" to track)
++
++=============================================================================
++
+
+:
+:
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git remote
+2d1
+
+==============================================================================
+
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git remote add 2d1a https://github.com/Ali-D
+ada/Repp
+
+==============================================================================
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git remote
+2d1
+2d1a
+:
+
+==============================================================================
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git push 2d1a
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream 2d1a master
+
+:
+
+=============================================================================
+
+D:\meteor\2d-1 [master +4 ~1 -0 !]> git push --set-upstream 2d1a master
+Counting objects: 12, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 6.97 KiB | 0 bytes/s, done.
+Total 12 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+Branch master set up to track remote branch master from 2d1a.
+To https://github.com/Ali-Dada/Repp
+ * [new branch]      master -> master
+
+===========================================================================
+
+D:\meteor\2d-1 [master ? +4 ~1 -0 !]> git remote show 2d1a
+* remote 2d1a
+  Fetch URL: https://github.com/Ali-Dada/Repp
+  Push  URL: https://github.com/Ali-Dada/Repp
+  HEAD branch: master
+  Remote branches:
+    master tracked
+    root   new (next fetch will store in remotes/2d1a)
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+
+==========================================================================
+
+D:\meteor\2d-1 [master ? +4 ~1 -0 !]> git fetch 2d1a
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Ali-Dada/Repp
+ * [new branch]      root       -> 2d1a/root
+
+=========================================================================
+
+D:\meteor\2d-1 [master ? +4 ~0 -3 !]> git remote
+2d1
+2d1a
+:
+
+=========================================================================
+
+
+D:\meteor\2d-1 [master ? +4 ~0 -3 !]> git remote rm 2d1
+:
+=========================================================================
+
+D:\meteor\2d-1 [master ? +4 ~0 -3 !]> git remote
+2d1a
+
+========================================================================
+
+
+
+
+
+
+
+
+
+
+
+Windows PowerShell
+(C) Корпорация Майкрософт, 2009. Все права защищены.
+
+ПРЕДУПРЕЖДЕНИЕ: posh-git support for PowerShell 2.0 is deprecated; you have
+version 2.0.
+To download version 5.0, please visit
+https://www.microsoft.com/en-us/download/details.aspx?id=50395
+For more information and to discuss this, please visit
+https://github.com/dahlbyk/posh-git/issues/163
+To suppress this warning, change your profile to include 'Import-Module
+posh-git -Args $true'.
+
+========================================================================
+
+~\Documents\GitHub [master +24 ~0 -0 !]> d:
+
+D:\> cd meteor
+
+========================================================================
+
+D:\meteor> cd 2d-1
+
+========================================================================
+
+D:\meteor\2d-1 [nbrch +4 ~1 -0 !]> git branch
+  master
+* nbrch
+
+========================================================================
+
+D:\meteor\2d-1 [nbrch +4 ~1 -0 !]>
+
+========================================================================
+------------------------------------------------------------------------
+========================================================================
+########################################################################
+
+C:\> cd dd1
+========================================================================
+C:\dd1> git clone https://github.com/Ali-Dada/Repp .
+Cloning into '.'...
+remote: Counting objects: 24, done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 24 (delta 6), reused 23 (delta 5), pack-reused 0
+Unpacking objects: 100% (24/24), done.
+========================================================================
+C:\dd1 [master ?]>
+
+C:\dd1 [master ?]> git checkout nbrch
+Branch nbrch set up to track remote branch nbrch from origin.
+Switched to a new branch 'nbrch'
+
+C:\dd1 [nbrch ?]>
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+How do you clone a Git repository into a specific folder?
+
+Go into the folder.. If the folder is empty, then:
+
+git clone git@github.com:whatever .
+
+else
+
+git init
+git remote add origin PATH/TO/REPO
+git fetch
+git checkout -t origin/masterD:\meteor>cd 2d-1
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+D:\meteor\2d-1>meteor list
+autopublish            1.0.7  (For prototyping only) Publish the entire ...
+blaze-html-templates   1.1.2  Compile HTML templates into reactive UI wi...
+ecmascript             0.8.0* Compiler plugin that supports ES2015+ in a...
+es5-shim               4.6.15  Shims and polyfills to improve ECMAScript...
+insecure               1.0.7  (For prototyping only) Allow all database ...
+meteor-base            1.1.0  Packages that every Meteor app needs
+mobile-experience      1.0.4  Packages for a great mobile user experience
+mongo                  1.1.18  Adaptor for using MongoDB and Minimongo o...
+reactive-var           1.0.11  Reactive variable
+shell-server           0.2.3  Server-side component of the `meteor shell...
+standard-minifier-css  1.3.4  Standard css minifier used with Meteor app...
+standard-minifier-js   2.1.0  Standard javascript minifiers used with Me...
+tracker                1.1.3  Dependency tracker to allow reactive callb...
+
+
+* New versions of these packages are available! Run 'meteor update' to try
+  to update those packages to their latest versions. If your packages
+  cannot be updated further, try typing
+  `meteor add <package>@<newVersion>` to see more information.
+
+=======================================================================
+
+
+D:\meteor\2d-1>meteor update
+This project is already at Meteor 1.5, the latest release.
+
+Changes to your project's package version selections from updating package
+versions:
+
+babel-compiler             upgraded from 6.19.1 to 6.19.3
+dynamic-import             upgraded from 0.1.0 to 0.1.1
+ecmascript                 upgraded from 0.8.0 to 0.8.1
+ecmascript-runtime-client  upgraded from 0.4.1 to 0.4.2
+minimongo                  upgraded from 1.2.0 to 1.2.1
+modules                    upgraded from 0.9.0 to 0.9.2
+
+=======================================================================
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+
