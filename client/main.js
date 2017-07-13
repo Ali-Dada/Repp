@@ -71,6 +71,7 @@ Template.tryES6.helpers({
   },
 });
 
+import './template.js';
 
 import './test01.js';
 

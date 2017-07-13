@@ -656,37 +656,19 @@ console.log("")
 {}
 
 
-/*
+
 o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
-console.log("Хранить файлы в GridFS в приложении Meteor")
+console.log("")
 {
-// Access GridStore API
-var GridStore = MongoInternals.NpmModule.GridStore;
-
-// Access default mongo database
-var db = MongoInternals.defaultRemoteCollectionDriver().mongo.db;
-
-// Writing data to GridFS
-new GridStore(db, '/public/img/2002.jpg', 'w').open(Meteor.bindEnvironment(function(err, gridStore) {
-    // Write string or buffer data to file
-    //gridStore.write(data, true, function(err, doc) { ... });
-
-    // Or write local FS file
-    gridStore.writeFile('/public/img/2002.jpg', function(err, doc) {  });  //{ ... });
-}));
-
-// Reading file from the GridFS by filename
-new GridStore(db, '/public/img/2002.jpg', 'r').open(Meteor.bindEnvironment(function(err, gridStore) {
-    var stream = gridStore.stream();
-    // .. do something with stream
-}));
 
 }
+/*
 */
 
+
+
+
 o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
-
-
 console.log('='.repeat(Nrepeat-2) )
 console.log('▓'.repeat(Nrepeat-2) )
 console.log("The End.")
