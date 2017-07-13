@@ -29,21 +29,16 @@ console.log("	(N:  случайное число от 1 до 1000)" );
 	console.log(i + "] " + result + ";" );
 
 o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 
- 
 console.log("	Деструктуризация" )
-console.log("	и метод repeat" );
-  
+{  
   let arr = [" hello!", 5]; // let
   let [str, times] = arr; // деструктуризация
-  v=str.repeat(times);//  метод repeat
-  console.log("v=str.repeat(times)=" + v + ";" )
+
 	//------------------//  
 	//  alert( v );     //
 	//------------------// 
-  let rf=Random.fraction()
-  //document.write(i + "]   " + result + ";" );
-  //console.log(   i + "]   " + result + ";" );
-  //console.log("   arr= " + arr + ";" );
+	console.log(str, times );
+}
 
 o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
 console.log("	Объявление переменных" )
@@ -572,15 +567,94 @@ console.log("	Функция Math.clz32(number)")
 // Функция Math.ciz32() возвращает число ведущих нулевых бит
 // в 32-битном представлении числа
 {
-console.log(Math.clz32 (7));
-console.log(Math.clz32 (1000));
-console.log(Math.clz32 (295000000));	
+console.log(Math.clz32 (7)); 			 // Выведет 29
+console.log(Math.clz32 (1000)); 		 // Выведет 22
+console.log(Math.clz32 (295000000));	 // Выведет 3
+}
+
+
+o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("	Функция Math.sign(number)")
+{
+console.log(Math.sign(11)); 	 // Выведет 1
+console.log(Math.sign(-11));	 // Выведет -1
+console.log(Math.sign(0));		 // Выведет 0
+}
+
+
+o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("	Функция Math.trunc(number)")
+//Функция Math, trunc ( ) возвращает целую часть числа,
+// отбрасывая дробную часть.
+{
+console.log(Math.trunc(11.17)); 	 // Выведет 11
+console.log(Math.trunc(-1.112)) ; 	 // Выведет -1	
+}
+
+
+o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("	Функция Math.fround()")
+// Функция Math.fround() округляет число 
+// до 32-битного значения с плавающей точкой
+{
+console.log(Math.fround(0)); 	 // Выведет 0
+console.log(Math.fround(1)); 	 // Выведет 1
+console.log(Math.fround(1.137)); 	 // Выведет 1.1369999647140503
+console.log(Math.fround(1.5));	 	 // Выведет 1.5
+}
+
+o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("	Unicode")
+// Любой символ Unicode с кодовым пунктом меньше 65536 можно
+// записать в строке JavaScript или в исходном коде с помощью управляющей последовательности виде шестнадцатеричного значения его
+// кодового пункта с префиксом \u. Управляющая последовательность
+// всегда должна содержать шесть символов. За префиксом \uи должны
+// следовать ровно четыре символа.
+{
+var a = "\u0061\u0062\u0063" ;
+console.log( a ) ; // Выведет "abc"	
+}
+
+
+o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("	Суррогатная пара")
+{
+console.log ( '|'+"\uD83D\uDE91"+'|' ) ;	
+console.log ( '|'+"\u{1F691}"+'|'  ) ;
+}
+
+
+o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("	Метод codePointAt()")
+{
+console.log("\uD83D\uDE91".codePointAt(1));
+console.log("\u{1F691}".codePointAt(1));
+console.log("hello".codePointAt(2));	
+}
+
+
+o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("	Метод String.fromCodePoint()")
+{
+console.log(String.fromCodePoint(0x61, 0x62, 0x63));
+console.log("\u0061\u0062 " == String.fromCodePoint(0x61, 0x62));
+}
+
+
+o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
+console.log("	Метод repeat" );
+{
+  let arr = [" hello!", 5]; // let
+  let [str, times] = arr; // деструктуризация
+  v=str.repeat(times);//  метод repeat
+  console.log("v=str.repeat(times)=" + v + ";" )
 }
 
 
 o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
 console.log("")
 {}
+
 
 /*
 o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
@@ -606,9 +680,9 @@ new GridStore(db, '/public/img/2002.jpg', 'r').open(Meteor.bindEnvironment(funct
     var stream = gridStore.stream();
     // .. do something with stream
 }));
+
 }
 */
-
 
 o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
 
