@@ -9,16 +9,43 @@ http://meteortips.com/deployment-tutorial/compose/
 Начало работы с Метеор развертывания
 Getting Started with Meteor Deployment
 
+
+https://zaxor.gitbooks.io/angular-meteor-md/20.handling%20files%20with%20collectionFS.html
+-- На этом этапе мы добавим возможность загружать изображения в наше приложение, а также сортировать и называть их.
+
+https://atmospherejs.com/msavin/mongol
+-- In-App MongoDB Editor.. now with improved third party package compatibility.
+
+https://medium.com/@victorleungtw/how-to-upload-files-with-meteor-js-7b8e811510fa
+-- How to upload files with Meteor.js?
+
+http://mongodb.github.io/node-mongodb-native/2.0/api-docs/
+-- Node.js MongoDB Driver API
+-- API-интерфейс драйвера Node.js MongoDB
+
+http://www.ru.w3eacademy.com/mongodb/mongodb_gridfs.htm
+-- GridFS является спецификация MongoDB для хранения и извлечения больших файлов , таких как изображения, аудио файлы, видео файлы и т.д. 
+
+https://www.meteor.com/tutorials
+-- УЧЕБНИКИ Создание простого приложения в считанные минуты. Мастер 
+передовых концепций и методов.
+
+http://mirknig.su/knigi/programming/43741-mastering-meteorjs-application-development-code.html
+
+
 --------------------------------------------------
+
 
 
 
 fex.net
 246549234577
-https://fex.net/246549234577
+961085443544
+https://fex.net/
 Alidada
 алидада47
 0677183348
+
 
 
 
@@ -30,11 +57,11 @@ register.payoneer.com
 
 Microsoft Windows [Version 6.1.7601]
 (c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
-
+=====================================================
 C:\Users\user>cd /
-
+=====================================================
 C:\>cd amrija
-
+=====================================================
 C:\Amrija>meteor create --full .
 Created a new Meteor app in current directory.
 
@@ -62,11 +89,10 @@ C:\Amrija>meteor --port 3333
 
 ========================================
 
-
 user@WIN-7AJ7FDSCVO2 MINGW64 /c/Amrija (work-002)
 $ git remote
 Repp
-
+========================================
 user@WIN-7AJ7FDSCVO2 MINGW64 /c/Amrija (work-002)
 $ git branch
   begin-0
@@ -86,9 +112,10 @@ Microsoft Windows [Version 6.1.7601]
 
 C:\Users\user>cd /
 
+========================================
 
 C:\>cd Amrija
-
+========================================
 C:\Amrija>meteor list
 blaze-html-templates              1.1.2  Compile HTML templates into rea...
 ecmascript                        0.8.1  Compiler plugin that supports E...
@@ -111,6 +138,8 @@ tracker                           1.1.3  Dependency tracker to allow rea...
   to update those packages to their latest versions. If your packages
   cannot be updated further, try typing
   `meteor add <package>@<newVersion>` to see more information.
+
+=========================================
 
 C:\Amrija>meteor mongo
 2017-07-02T09:50:41.339+0300 I CONTROL  [main] Hotfix KB2731284 or later update
@@ -198,7 +227,7 @@ new GridStore(db, filename, 'w').open(Meteor.bindEnvironment(function(err, gridS
 Странно, что GridStore API не предоставляет способ получить файл с идентификатором, но только с именем файла, которое может быть не уникальным. Поэтому вы должны заботиться о уникальности имени файла (возможно, используя некоторые комбинации ObjectID).
 
 
-
+===================================================
 
 C:\Amrija>meteor add msavin:mongol
 
@@ -209,11 +238,12 @@ msavin:mongol      added, version 4.0.1
 session            added, version 1.1.7
 
 
+
 msavin:mongol: In-App MongoDB Editor.. now with improved third party
 package compatibility.
 
 
-
+=======================================================
 
 C:\Amrija>meteor list
 blaze-html-templates              1.1.2  Compile HTML templates into rea...
@@ -239,6 +269,7 @@ tracker                           1.1.3  Dependency tracker to allow rea...
   cannot be updated further, try typing
   `meteor add <package>@<newVersion>` to see more information.
 
+=============================================
 
  Jebin B V - Mastering MeteorJS Application Development 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -253,30 +284,9 @@ tracker                           1.1.3  Dependency tracker to allow rea...
 Mastering MeteorJS Application Development shows you how to do even more with MeteorJS – if you're ready to try a comprehensive course through one of the most exciting frameworks in web development today, this is the book you need.
 
 You'll not only learn how MeteorJS makes Web development easier, but also how you can make using MeteorJS easier by automating and simplifying tasks so you can be confident you have full control of everything in your workflow – especially everything that could go wrong. With further insights on developing for mobile – and how MeteorJS can help you tackle the challenges of the trend – and details on incorporating SEO strategies into your application, this book isn't just a code tutorial – it's about creating a product that users love.
+
 ===========================================================
 
-
-https://zaxor.gitbooks.io/angular-meteor-md/20.handling%20files%20with%20collectionFS.html
--- На этом этапе мы добавим возможность загружать изображения в наше приложение, а также сортировать и называть их.
-
-https://atmospherejs.com/msavin/mongol
--- In-App MongoDB Editor.. now with improved third party package compatibility.
-
-https://medium.com/@victorleungtw/how-to-upload-files-with-meteor-js-7b8e811510fa
--- How to upload files with Meteor.js?
-
-http://mongodb.github.io/node-mongodb-native/2.0/api-docs/
--- Node.js MongoDB Driver API
--- API-интерфейс драйвера Node.js MongoDB
-
-http://www.ru.w3eacademy.com/mongodb/mongodb_gridfs.htm
--- GridFS является спецификация MongoDB для хранения и извлечения больших файлов , таких как изображения, аудио файлы, видео файлы и т.д. 
-
-https://www.meteor.com/tutorials
--- УЧЕБНИКИ Создание простого приложения в считанные минуты. Мастер 
-передовых концепций и методов.
-
-http://mirknig.su/knigi/programming/43741-mastering-meteorjs-application-development-code.html
 
 
 
@@ -361,4 +371,86 @@ tracker                           1.1.3  Dependency tracker to allow rea...
   `meteor add <package>@<newVersion>` to see more information.
 
 ==============================================================
+
+C:\Amrija>meteor update
+{ [Error: ENOTEMPTY: directory not empty, rmdir 'C:\Users\user\AppData\Local\Tem
+p\mt-6n4dbz\mt-os.windows.x86_32\dev_bundle\lib\node_modules\babel-plugin-transf
+orm-object-rest-spread\node_modules\babel-runtime']
+  errno: -4051,
+  code: 'ENOTEMPTY',
+  syscall: 'rmdir',
+  path: 'C:\\Users\\user\\AppData\\Local\\Temp\\mt-6n4dbz\\mt-os.windows.x86_32\
+\dev_bundle\\lib\\node_modules\\babel-plugin-transform-object-rest-spread\\node_
+modules\\babel-runtime' }
+
+Changes to your project's package version selections from updating the
+release:
+
+allow-deny             upgraded from 1.0.5 to 1.0.6
+babel-compiler         upgraded from 6.19.3 to 6.19.4
+boilerplate-generator  upgraded from 1.1.0 to 1.1.1
+ddp                    upgraded from 1.2.5 to 1.3.0
+ddp-client*            upgraded from 1.3.4 to 2.0.0
+ddp-common             upgraded from 1.2.8 to 1.2.9
+ddp-server*            upgraded from 1.3.14 to 2.0.0
+meteor                 upgraded from 1.6.1 to 1.7.0
+minifier-js            upgraded from 2.1.0 to 2.1.1
+mongo                  upgraded from 1.1.18 to 1.1.19
+standard-minifier-js   upgraded from 2.1.0 to 2.1.1
+webapp                 upgraded from 1.3.16 to 1.3.17
+
+
+* These packages have been updated to new versions that are not
+backwards
+compatible.
+Amrija: updated to Meteor 1.5.1.
+
+Changes to your project's package version selections from updating package
+versions:
+
+ecmascript                        upgraded from 0.8.1 to 0.8.2
+ecmascript-runtime-client         upgraded from 0.4.2 to 0.4.3
+johanbrook:publication-collector  upgraded from 1.0.8 to 1.0.9
+
+
+Newer versions of the following indirect dependencies are available:
+ * coffeescript 1.0.17 (1.12.6_1 is available)
+These versions may not be compatible with your project.
+To update one or more of these packages to their latest
+compatible versions, pass their names to `meteor update`,
+or just run `meteor update --all-packages`.
+
+=========================================================================
+
+C:\Amrija>meteor update --all-packages
+This project is already at Meteor 1.5.1, the latest release.
+
+Changes to your project's package version selections from updating package
+versions:
+
+coffeescript  upgraded from 1.0.17 to 1.12.6_1
+
+========================================================================
+
+C:\Amrija>meteor list
+blaze-html-templates              1.1.2  Compile HTML templates into rea...
+cfs:filesystem                    0.1.2  Filesystem storage adapter for ...
+cfs:standard-packages             0.5.9  Filesystem for Meteor, collecti...
+ecmascript                        0.8.2  Compiler plugin that supports E...
+es5-shim                          4.6.15  Shims and polyfills to improve...
+johanbrook:publication-collector  1.0.9  Test a Meteor publication by co...
+kadira:blaze-layout               2.3.0  Layout Manager for Blaze (works...
+kadira:flow-router                2.12.1  Carefully Designed Client Side...
+less                              2.7.9  Leaner CSS language
+meteor-base                       1.1.0  Packages that every Meteor app ...
+mobile-experience                 1.0.4  Packages for a great mobile use...
+mongo                             1.1.19  Adaptor for using MongoDB and ...
+msavin:mongol                     4.0.1  In-App MongoDB Editor.. now wit...
+practicalmeteor:mocha             2.4.5_6  Write package tests with moch...
+reactive-var                      1.0.11  Reactive variable
+standard-minifier-css             1.3.4  Standard css minifier used with...
+standard-minifier-js              2.1.1  Standard javascript minifiers u...
+tracker                           1.1.3  Dependency tracker to allow rea...
+
+========================================================================
 

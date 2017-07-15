@@ -1,0 +1,775 @@
+﻿https://github.com/jagi/meteor-astronomy
+http://jagi.github.io/meteor-astronomy/
+
+d:\Meteor\
+Движение Meteor'а, создаем todo-list [GeekBrains].mp4
+1h38m
+
+meteor --port 3000
+
+mmm
+C:\Users\User>d:
+D:\>cd Meteor
+D:\Meteor>cd todoapp
+D:\Meteor\todoapp>cd todolist
+meteor
+
+// mmm
+// meteor mongo
+// db.todos.find()
+
+run Robomongo
+connect
+localhost 3001
+
+D:\Meteor\todoapp\todolist>meteor add twbs:bootstrap
+Changes to your project's package version selections:
+twbs:bootstrap  added, version 3.3.6
+twbs:bootstrap: The most popular front-end framework for developing
+responsive, mobile first projects on the web.
+
+D:\Meteor\todoapp\todolist>meteor add less
+Changes to your project's package version selections:
+less  added, version 2.7.9
+less: Leaner CSS language
+
+D:\Meteor\todoapp\todolist>meteor list
+autopublish            1.0.7  (For prototyping only) Publish the entire ...
+blaze-html-templates   1.1.2  Compile HTML templates into reactive UI wi...
+ecmascript             0.7.3  Compiler plugin that supports ES2015+ in a...
+es5-shim               4.6.15  Shims and polyfills to improve ECMAScript...
+insecure               1.0.7  (For prototyping only) Allow all database ...
+less                   2.7.9  Leaner CSS language
+meteor-base            1.0.4  Packages that every Meteor app needs
+mobile-experience      1.0.4  Packages for a great mobile user experience
+mongo                  1.1.17  Adaptor for using MongoDB and Minimongo o...
+reactive-var           1.0.11  Reactive variable
+shell-server           0.2.3  Server-side component of the `meteor shell...
+standard-minifier-css  1.3.4  Standard css minifier used with Meteor app...
+standard-minifier-js   2.0.0  Standard javascript minifiers used with Me...
+tracker                1.1.3  Dependency tracker to allow reactive callb...
+twbs:bootstrap         3.3.6  The most popular front-end framework for d...
+
+C:\Users\User>D:
+
+D:\>cd Meteor
+
+D:\Meteor>cd todoapp
+
+D:\Meteor\todoapp>cd todolist
+
+D:\Meteor\todoapp\todolist>meteor mongo
+2017-05-29T23:38:38.511+0300 I CONTROL  [main] Hotfix KB2731284 or later update
+is not installed, will zero-out data files
+MongoDB shell version: 3.2.12
+connecting to: 127.0.0.1:3001/meteor
+2017-05-29T23:38:43.771+0300 W NETWORK  [thread1] Failed to connect to 127.0.0.1
+:3001 after 5000ms milliseconds, giving up.
+2017-05-29T23:38:43.772+0300 E QUERY    [thread1] Error: couldn't connect to ser
+ver 127.0.0.1:3001, connection attempt failed :
+connect@src/mongo/shell/mongo.js:231:14
+@(connect):1:6
+exception: connect failed
+
+D:\Meteor\todoapp\todolist>meteor mongo
+2017-05-29T23:42:26.997+0300 I CONTROL  [main] Hotfix KB2731284 or later update is not installed, will zero-out data fil
+es
+MongoDB shell version: 3.2.12
+connecting to: 127.0.0.1:3001/meteor
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+Questions? Try the support group
+        http://groups.google.com/group/mongodb-user
+Server has startup warnings:
+2017-05-29T16:44:35.381+0300 I CONTROL  [initandlisten]
+2017-05-29T16:44:35.381+0300 I CONTROL  [initandlisten] ** WARNING: This 32-bit MongoDB binary is deprecated
+2017-05-29T16:44:35.381+0300 I CONTROL  [initandlisten] ** NOTE: This is a 32-bit MongoDB binary running on a 64-bit ope
+rating
+2017-05-29T16:44:35.381+0300 I CONTROL  [initandlisten] **      system. Switch to a 64-bit build of MongoDB to
+2017-05-29T16:44:35.381+0300 I CONTROL  [initandlisten] **      support larger databases.
+2017-05-29T16:44:35.381+0300 I CONTROL  [initandlisten]
+2017-05-29T16:44:35.381+0300 I CONTROL  [initandlisten]
+2017-05-29T16:44:35.381+0300 I CONTROL  [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+2017-05-29T16:44:35.381+0300 I CONTROL  [initandlisten] **       32 bit builds are limited to less than 2GB of data (or
+less with --journal).
+2017-05-29T16:44:35.382+0300 I CONTROL  [initandlisten] **       Note that journaling defaults to off for 32 bit and is
+currently off.
+2017-05-29T16:44:35.382+0300 I CONTROL  [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+2017-05-29T16:44:35.382+0300 I CONTROL  [initandlisten]
+meteor:PRIMARY>
+
+
+Microsoft Windows [Version 6.1.7601]
+(c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
+C:\Users\User>D:
+D:\>cd Meteor
+D:\Meteor>cd todoapp
+D:\Meteor\todoapp>cd todolist
+D:\Meteor\todoapp\todolist>meteor mongo
+2017-05-30T01:10:55.266+0300 I CONTROL  [main] Hotfix KB2731284 or later update is installed, no need to zero-out data files
+MongoDB shell version: 3.2.12
+connecting to: 127.0.0.1:3001/meteor
+Server has startup warnings:
+2017-05-30T01:08:33.461+0300 I CONTROL  [initandlisten]
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten] ** WARNING: This 32-bit MongoDB binary is deprecated
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten] ** NOTE: This is a 32-bit MongoDB binary running on a 64-bit ope
+rating
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten] **      system. Switch to a 64-bit build of MongoDB to
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten] **      support larger databases.
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten]
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten]
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten] **       32 bit builds are limited to less than 2GB of data (or
+less with --journal).
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten] **       Note that journaling defaults to off for 32 bit and is
+currently off.
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+2017-05-30T01:08:33.462+0300 I CONTROL  [initandlisten]
+meteor:PRIMARY>
+
+meteor:PRIMARY> db.todos.find()
+{ "_id" : "kSSArTdp3HPz7kGDs", "todo" : "Погладить белье" }
+{ "_id" : "oQD9wXnww8RWvMGem", "todo" : "Помыть посуду" }
+meteor:PRIMARY>
+
+meteor:PRIMARY> db.todos.insert({"todo": "Поиграть с котом"})
+WriteResult({ "nInserted" : 1 })
+meteor:PRIMARY> db.todos.insert({"todo": "Погулять"})
+WriteResult({ "nInserted" : 1 })
+
+meteor:PRIMARY> db.todos.find()
+{ "_id" : "kSSArTdp3HPz7kGDs", "todo" : "Погладить белье" }
+{ "_id" : "oQD9wXnww8RWvMGem", "todo" : "Помыть посуду" }
+{ "_id" : ObjectId("592d089d24636c24a78645fc"), "todo" : "Поиграть с котом" }
+{ "_id" : ObjectId("592d099d24636c24a78645fd"), "todo" : "Погулять" }
+{ "_id" : "fDpEGnxQCwWij43sm", "todo" : "Сделать уроки" }
+{ "_id" : "ocjNLJEc5pCxPAyJW", "todo" : "Приготовить еду" }
+meteor:PRIMARY>
+
+meteor:PRIMARY> help
+        db.help()                    help on db methods
+        db.mycoll.help()             help on collection methods
+        sh.help()                    sharding helpers
+        rs.help()                    replica set helpers
+        help admin                   administrative help
+        help connect                 connecting to a db help
+        help keys                    key shortcuts
+        help misc                    misc things to know
+        help mr                      mapreduce
+
+        show dbs                     show database names
+        show collections             show collections in current database
+        show users                   show users in current database
+        show profile                 show most recent system.profile entries with time >= 1ms
+        show logs                    show the accessible logger names
+        show log [name]              prints out the last segment of log in memory, 'global' is default
+        use <db_name>                set current database
+        db.foo.find()                list objects in collection foo
+        db.foo.find( { a : 1 } )     list objects in foo where a == 1
+        it                           result of the last line evaluated; use to further iterate
+        DBQuery.shellBatchSize = x   set default number of items to display on shell
+        exit                         quit the mongo shell
+meteor:PRIMARY> db.help()
+DB methods:
+        db.adminCommand(nameOrDocument) - switches to 'admin' db, and runs command [ just calls db.runCommand(...) ]
+        db.auth(username, password)
+        db.cloneDatabase(fromhost)
+        db.commandHelp(name) returns the help for the command
+        db.copyDatabase(fromdb, todb, fromhost)
+        db.createCollection(name, { size : ..., capped : ..., max : ... } )
+        db.createUser(userDocument)
+        db.currentOp() displays currently executing operations in the db
+        db.dropDatabase()
+        db.eval() - deprecated
+        db.fsyncLock() flush data to disk and lock server for backups
+        db.fsyncUnlock() unlocks server following a db.fsyncLock()
+        db.getCollection(cname) same as db['cname'] or db.cname
+        db.getCollectionInfos([filter]) - returns a list that contains the names and options of the db's collections
+        db.getCollectionNames()
+        db.getLastError() - just returns the err msg string
+        db.getLastErrorObj() - return full status object
+        db.getLogComponents()
+        db.getMongo() get the server connection object
+        db.getMongo().setSlaveOk() allow queries on a replication slave server
+        db.getName()
+        db.getPrevError()
+        db.getProfilingLevel() - deprecated
+        db.getProfilingStatus() - returns if profiling is on and slow threshold
+        db.getReplicationInfo()
+        db.getSiblingDB(name) get the db at the same server as this one
+        db.getWriteConcern() - returns the write concern used for any operations on this db, inherited from server objec
+t if set
+        db.hostInfo() get details about the server's host
+        db.isMaster() check replica primary status
+        db.killOp(opid) kills the current operation in the db
+        db.listCommands() lists all the db commands
+        db.loadServerScripts() loads all the scripts in db.system.js
+        db.logout()
+        db.printCollectionStats()
+        db.printReplicationInfo()
+        db.printShardingStatus()
+        db.printSlaveReplicationInfo()
+        db.dropUser(username)
+        db.repairDatabase()
+        db.resetError()
+        db.runCommand(cmdObj) run a database command.  if cmdObj is a string, turns it into { cmdObj : 1 }
+        db.serverStatus()
+        db.setLogLevel(level,<component>)
+        db.setProfilingLevel(level,<slowms>) 0=off 1=slow 2=all
+        db.setWriteConcern( <write concern doc> ) - sets the write concern for writes to the db
+        db.unsetWriteConcern( <write concern doc> ) - unsets the write concern for writes to the db
+        db.setVerboseShell(flag) display extra information in shell output
+        db.shutdownServer()
+        db.stats()
+        db.version() current version of the server
+
+
+        meteor:PRIMARY> db.todos.deleteOne( { "todo" : "Погулять" } )
+        { "acknowledged" : true, "deletedCount" : 1 }
+        meteor:PRIMARY> db.todos.find()
+        { "_id" : "kSSArTdp3HPz7kGDs", "todo" : "Погладить белье" }
+        { "_id" : "oQD9wXnww8RWvMGem", "todo" : "Помыть посуду" }
+        { "_id" : ObjectId("592d089d24636c24a78645fc"), "todo" : "Поиграть с котом" }
+        { "_id" : "fDpEGnxQCwWij43sm", "todo" : "Сделать уроки" }
+        { "_id" : "ocjNLJEc5pCxPAyJW", "todo" : "Приготовить еду" }
+        meteor:PRIMARY> db.todos.deleteOne( { "todo" : "Погулять" } )
+        { "acknowledged" : true, "deletedCount" : 0 }
+        meteor:PRIMARY> db.todos.find()
+        { "_id" : "kSSArTdp3HPz7kGDs", "todo" : "Погладить белье" }
+        { "_id" : "oQD9wXnww8RWvMGem", "todo" : "Помыть посуду" }
+        { "_id" : ObjectId("592d089d24636c24a78645fc"), "todo" : "Поиграть с котом" }
+        { "_id" : "fDpEGnxQCwWij43sm", "todo" : "Сделать уроки" }
+        { "_id" : "ocjNLJEc5pCxPAyJW", "todo" : "Приготовить еду" }
+        meteor:PRIMARY> db.todos.deleteOne( { "todo" : "Поиграть с котом" } )
+        { "acknowledged" : true, "deletedCount" : 1 }
+        meteor:PRIMARY> db.todos.find()
+        { "_id" : "kSSArTdp3HPz7kGDs", "todo" : "Погладить белье" }
+        { "_id" : "oQD9wXnww8RWvMGem", "todo" : "Помыть посуду" }
+        { "_id" : "fDpEGnxQCwWij43sm", "todo" : "Сделать уроки" }
+        { "_id" : "ocjNLJEc5pCxPAyJW", "todo" : "Приготовить еду" }
+        meteor:PRIMARY>
+
+D:\Meteor\todoapp\todolist>meteor update
+Unable to update package catalog (are you offline?)
+
+If you are using Meteor behind a proxy, set HTTP_PROXY and HTTPS_PROXY environment variables or see this page for
+more details:  https://github.com/meteor/meteor/wiki/Using-Meteor-behind-a-proxy
+
+
+Changes to your project's package version selections from updating the release:
+
+babel-compiler             upgraded from 6.18.2 to 6.19.1
+boilerplate-generator      upgraded from 1.0.11 to 1.1.0
+dynamic-import             added, version 0.1.0
+ecmascript                 upgraded from 0.7.3 to 0.8.0
+ecmascript-runtime         upgraded from 0.3.15 to 0.4.1
+ecmascript-runtime-client  added, version 0.4.1
+ecmascript-runtime-server  added, version 0.4.1
+meteor-base                upgraded from 1.0.4 to 1.1.0
+minifier-js                upgraded from 2.0.0 to 2.1.0
+minimongo                  upgraded from 1.0.23 to 1.2.0
+modules                    upgraded from 0.8.2 to 0.9.0
+modules-runtime            upgraded from 0.7.10 to 0.8.0
+mongo                      upgraded from 1.1.17 to 1.1.18
+promise                    upgraded from 0.8.8 to 0.8.9
+standard-minifier-js       upgraded from 2.0.0 to 2.1.0
+webapp                     upgraded from 1.3.15 to 1.3.16
+
+todolist: updated to Meteor 1.5.
+Your top-level dependencies are at their latest compatible versions.
+
+D:\Meteor\todoapp\todolist>meteor list
+autopublish            1.0.7  (For prototyping only) Publish the entire database to all clients
+blaze-html-templates   1.1.2  Compile HTML templates into reactive UI with Meteor Blaze
+dynamic-import         0.1.0  Runtime support for Meteor 1.5 dynamic import(...) syntax
+ecmascript             0.8.0  Compiler plugin that supports ES2015+ in all .js files
+es5-shim               4.6.15  Shims and polyfills to improve ECMAScript 5 support
+insecure               1.0.7  (For prototyping only) Allow all database writes from the client
+less                   2.7.9  Leaner CSS language
+meteor-base            1.1.0  Packages that every Meteor app needs
+mobile-experience      1.0.4  Packages for a great mobile user experience
+mongo                  1.1.18  Adaptor for using MongoDB and Minimongo over DDP
+reactive-var           1.0.11  Reactive variable
+shell-server           0.2.3  Server-side component of the `meteor shell` command.
+standard-minifier-css  1.3.4  Standard css minifier used with Meteor apps by default.
+standard-minifier-js   2.1.0  Standard javascript minifiers used with Meteor apps by default.
+tracker                1.1.3  Dependency tracker to allow reactive callbacks
+twbs:bootstrap         3.3.6  The most popular front-end framework for developing responsive, mobile first proje...
+
+D:\Meteor\todoapp\todolist>meteor add accounts-base
+
+Changes to your project's package version selections:
+
+accounts-base          added, version 1.3.0
+ddp-rate-limiter       added, version 1.0.7
+localstorage           added, version 1.1.0
+rate-limit             added, version 1.0.8
+service-configuration  added, version 1.0.11
+
+
+accounts-base: A user account system
+
+D:\Meteor\todoapp\todolist>meteor add accounts-password
+
+Changes to your project's package version selections:
+
+accounts-password  added, version 1.3.6
+email              added, version 1.2.1
+npm-bcrypt         added, version 0.9.2
+sha                added, version 1.0.9
+srp                added, version 1.0.10
+
+
+accounts-password: Password support for accounts
+
+D:\Meteor\todoapp\todolist>meteor add ian:accounts-ui-bootstrap-3
+
+Changes to your project's package version selections:
+
+anti:i18n                    added, version 0.4.3
+ian:accounts-ui-bootstrap-3  added, version 1.2.89
+reactive-dict                added, version 1.1.9
+session                      added, version 1.1.7
+stylus                       added, version 2.513.9
+
+
+ian:accounts-ui-bootstrap-3: Bootstrap-styled accounts-ui with multi-language support.
+
+
+D:\Meteor\todoapp\todolist>meteor list
+accounts-base                1.3.0  A user account system
+accounts-password            1.3.6  Password support for accounts
+autopublish                  1.0.7  (For prototyping only) Publish the entire database to all clients
+blaze-html-templates         1.1.2  Compile HTML templates into reactive UI with Meteor Blaze
+dynamic-import               0.1.0  Runtime support for Meteor 1.5 dynamic import(...) syntax
+ecmascript                   0.8.0  Compiler plugin that supports ES2015+ in all .js files
+es5-shim                     4.6.15  Shims and polyfills to improve ECMAScript 5 support
+ian:accounts-ui-bootstrap-3  1.2.89  Bootstrap-styled accounts-ui with multi-language support.
+insecure                     1.0.7  (For prototyping only) Allow all database writes from the client
+less                         2.7.9  Leaner CSS language
+meteor-base                  1.1.0  Packages that every Meteor app needs
+mobile-experience            1.0.4  Packages for a great mobile user experience
+mongo                        1.1.18  Adaptor for using MongoDB and Minimongo over DDP
+reactive-var                 1.0.11  Reactive variable
+shell-server                 0.2.3  Server-side component of the `meteor shell` command.
+standard-minifier-css        1.3.4  Standard css minifier used with Meteor apps by default.
+standard-minifier-js         2.1.0  Standard javascript minifiers used with Meteor apps by default.
+tracker                      1.1.3  Dependency tracker to allow reactive callbacks
+twbs:bootstrap               3.3.6  The most popular front-end framework for developing responsive, mobile first...
+
+
+C:\Users\User>D:
+D:\>cd Meteor
+D:\Meteor>cd todoapp
+D:\Meteor\todoapp>cd todolist
+D:\Meteor\todoapp\todolist>meteor
+[[[[[ ~\D\Meteor\todoapp\todolist ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+W20170608-00:22:26.195(3)? (STDERR) Note: you are using a pure-JavaScript implementation of bcrypt.
+W20170608-00:22:26.653(3)? (STDERR) While this implementation will work correctly, it is known to be
+W20170608-00:22:26.656(3)? (STDERR) approximately three times slower than the native implementation.
+W20170608-00:22:26.659(3)? (STDERR) In order to use the native implementation instead, run
+W20170608-00:22:26.663(3)? (STDERR)
+W20170608-00:22:26.666(3)? (STDERR)   meteor npm install --save bcrypt
+W20170608-00:22:26.668(3)? (STDERR)
+W20170608-00:22:26.671(3)? (STDERR) in the root directory of your application.
+=> Started your app.
+
+=> App running at: http://localhost:3000/
+   Type Control-C twice to stop.
+
+D:\Meteor\todoapp\todolist>meteor remove autopublish
+Changes to your project's package version selections:
+autopublish  removed from your project
+autopublish: removed dependency
+
+D:\Meteor\todoapp\todolist>meteor remove insecure
+Changes to your project's package version selections:
+insecure  removed from your project
+insecure: removed dependency
+
+D:\Meteor\todoapp\todolist>meteor npm install --save bcrypt
+
+> bcrypt@1.0.2 install D:\Meteor\todoapp\todolist\node_modules\bcrypt
+> node-pre-gyp install --fallback-to-build
+
+[bcrypt] Success: "D:\Meteor\todoapp\todolist\node_modules\bcrypt\lib\binding\bcrypt_lib.node" is installed via remote
+todolist@ D:\Meteor\todoapp\todolist
+`-- bcrypt@1.0.2
+  +-- bindings@1.2.1
+  +-- nan@2.5.0
+  `-- node-pre-gyp@0.6.32
+    +-- mkdirp@0.5.1
+    | `-- minimist@0.0.8
+    +-- nopt@3.0.6
+    | `-- abbrev@1.1.0
+    +-- npmlog@4.1.0
+    | +-- are-we-there-yet@1.1.4
+    | | +-- delegates@1.0.0
+    | | `-- readable-stream@2.2.11
+    | |   +-- core-util-is@1.0.2  deduped
+    | |   +-- inherits@2.0.3  deduped
+    | |   +-- isarray@1.0.0  deduped
+    | |   +-- process-nextick-args@1.0.7  deduped
+    | |   +-- safe-buffer@5.0.1  deduped
+    | |   +-- string_decoder@1.0.2
+    | |   | `-- safe-buffer@5.0.1  deduped
+    | |   `-- util-deprecate@1.0.2  deduped
+    | +-- console-control-strings@1.1.0
+    | +-- gauge@2.7.4
+    | | +-- aproba@1.1.2
+    | | +-- console-control-strings@1.1.0  deduped
+    | | +-- has-unicode@2.0.1
+    | | +-- object-assign@4.1.1
+    | | +-- signal-exit@3.0.2
+    | | +-- string-width@1.0.2
+    | | | +-- code-point-at@1.1.0
+    | | | +-- is-fullwidth-code-point@1.0.0
+    | | | | `-- number-is-nan@1.0.1
+    | | | `-- strip-ansi@3.0.1  deduped
+    | | +-- strip-ansi@3.0.1
+    | | | `-- ansi-regex@2.1.1
+    | | `-- wide-align@1.1.2
+    | |   `-- string-width@1.0.2  deduped
+    | `-- set-blocking@2.0.0
+    +-- rc@1.1.7
+    | +-- deep-extend@0.4.2
+    | +-- ini@1.3.4
+    | +-- minimist@1.2.0
+    | `-- strip-json-comments@2.0.1
+    +-- request@2.81.0
+    | +-- aws-sign2@0.6.0
+    | +-- aws4@1.6.0
+    | +-- caseless@0.12.0
+    | +-- combined-stream@1.0.5
+    | | `-- delayed-stream@1.0.0
+    | +-- extend@3.0.1
+    | +-- forever-agent@0.6.1
+    | +-- form-data@2.1.4
+    | | +-- asynckit@0.4.0
+    | | +-- combined-stream@1.0.5  deduped
+    | | `-- mime-types@2.1.15  deduped
+    | +-- har-validator@4.2.1
+    | | +-- ajv@4.11.8
+    | | | +-- co@4.6.0
+    | | | `-- json-stable-stringify@1.0.1
+    | | |   `-- jsonify@0.0.0
+    | | `-- har-schema@1.0.5
+    | +-- hawk@3.1.3
+    | | +-- boom@2.10.1
+    | | | `-- hoek@2.16.3  deduped
+    | | +-- cryptiles@2.0.5
+    | | | `-- boom@2.10.1  deduped
+    | | +-- hoek@2.16.3
+    | | `-- sntp@1.0.9
+    | |   `-- hoek@2.16.3  deduped
+    | +-- http-signature@1.1.1
+    | | +-- assert-plus@0.2.0
+    | | +-- jsprim@1.4.0
+    | | | +-- assert-plus@1.0.0
+    | | | +-- extsprintf@1.0.2
+    | | | +-- json-schema@0.2.3
+    | | | `-- verror@1.3.6
+    | | |   `-- extsprintf@1.0.2  deduped
+    | | `-- sshpk@1.13.1
+    | |   +-- asn1@0.2.3
+    | |   +-- assert-plus@1.0.0
+    | |   +-- bcrypt-pbkdf@1.0.1
+    | |   | `-- tweetnacl@0.14.5  deduped
+    | |   +-- dashdash@1.14.1
+    | |   | `-- assert-plus@1.0.0
+    | |   +-- ecc-jsbn@0.1.1
+    | |   | `-- jsbn@0.1.1  deduped
+    | |   +-- getpass@0.1.7
+    | |   | `-- assert-plus@1.0.0
+    | |   +-- jsbn@0.1.1
+    | |   `-- tweetnacl@0.14.5
+    | +-- is-typedarray@1.0.0
+    | +-- isstream@0.1.2
+    | +-- json-stringify-safe@5.0.1
+    | +-- mime-types@2.1.15
+    | | `-- mime-db@1.27.0
+    | +-- oauth-sign@0.8.2
+    | +-- performance-now@0.2.0
+    | +-- qs@6.4.0
+    | +-- safe-buffer@5.0.1
+    | +-- stringstream@0.0.5
+    | +-- tough-cookie@2.3.2
+    | | `-- punycode@1.4.1
+    | +-- tunnel-agent@0.6.0
+    | | `-- safe-buffer@5.0.1  deduped
+    | `-- uuid@3.0.1
+    +-- rimraf@2.5.4
+    | `-- glob@7.1.2
+    |   +-- fs.realpath@1.0.0
+    |   +-- inflight@1.0.6
+    |   | +-- once@1.4.0  deduped
+    |   | `-- wrappy@1.0.2  deduped
+    |   +-- inherits@2.0.3  deduped
+    |   +-- minimatch@3.0.4
+    |   | `-- brace-expansion@1.1.7
+    |   |   +-- balanced-match@0.4.2
+    |   |   `-- concat-map@0.0.1
+    |   +-- once@1.4.0
+    |   | `-- wrappy@1.0.2  deduped
+    |   `-- path-is-absolute@1.0.1
+    +-- semver@5.3.0
+    +-- tar@2.2.1
+    | +-- block-stream@0.0.9
+    | | `-- inherits@2.0.3  deduped
+    | +-- fstream@1.0.11
+    | | +-- graceful-fs@4.1.11
+    | | +-- inherits@2.0.3  deduped
+    | | +-- mkdirp@0.5.1  deduped
+    | | `-- rimraf@2.5.4  deduped
+    | `-- inherits@2.0.3
+    `-- tar-pack@3.3.0
+      +-- debug@2.2.0
+      | `-- ms@0.7.1
+      +-- fstream@1.0.11  deduped
+      +-- fstream-ignore@1.0.5
+      | +-- fstream@1.0.11  deduped
+      | +-- inherits@2.0.3  deduped
+      | `-- minimatch@3.0.4  deduped
+      +-- once@1.3.3
+      | `-- wrappy@1.0.2
+      +-- readable-stream@2.1.5
+      | +-- buffer-shims@1.0.0
+      | +-- core-util-is@1.0.2
+      | +-- inherits@2.0.3  deduped
+      | +-- isarray@1.0.0
+      | +-- process-nextick-args@1.0.7
+      | +-- string_decoder@0.10.31
+      | `-- util-deprecate@1.0.2
+      +-- rimraf@2.5.4  deduped
+      +-- tar@2.2.1  deduped
+      `-- uid-number@0.0.6
+
+	  
+D:\Meteor\todoapp\todolist>meteor list
+accounts-base                1.3.0  A user account system
+accounts-password            1.3.6  Password support for accounts
+blaze-html-templates         1.1.2  Compile HTML templates into reactive UI with Meteor Blaze
+dynamic-import               0.1.0* Runtime support for Meteor 1.5 dynamic import(...) syntax
+ecmascript                   0.8.0  Compiler plugin that supports ES2015+ in all .js files
+es5-shim                     4.6.15  Shims and polyfills to improve ECMAScript 5 support
+ian:accounts-ui-bootstrap-3  1.2.89  Bootstrap-styled accounts-ui with multi-language support.
+less                         2.7.9  Leaner CSS language
+meteor-base                  1.1.0  Packages that every Meteor app needs
+mobile-experience            1.0.4  Packages for a great mobile user experience
+mongo                        1.1.18  Adaptor for using MongoDB and Minimongo over DDP
+reactive-var                 1.0.11  Reactive variable
+shell-server                 0.2.3  Server-side component of the `meteor shell` command.
+standard-minifier-css        1.3.4  Standard css minifier used with Meteor apps by default.
+standard-minifier-js         2.1.0  Standard javascript minifiers used with Meteor apps by default.
+tracker                      1.1.3  Dependency tracker to allow reactive callbacks
+twbs:bootstrap               3.3.6  The most popular front-end framework for developing responsive, mobile first...
+
+
+* New versions of these packages are available! Run 'meteor update' to try to update those packages to their
+  latest versions. If your packages cannot be updated further, try typing `meteor add <package>@<newVersion>` to
+  see more information.
+
+D:\Meteor\todoapp\todolist>meteor update
+This project is already at Meteor 1.5, the latest release.
+
+Changes to your project's package version selections from updating package versions:
+
+babel-compiler             upgraded from 6.19.1 to 6.19.2
+dynamic-import             upgraded from 0.1.0 to 0.1.1
+ecmascript-runtime-client  upgraded from 0.4.1 to 0.4.2
+email                      upgraded from 1.2.1 to 1.2.3
+minimongo                  upgraded from 1.2.0 to 1.2.1
+modules                    upgraded from 0.9.0 to 0.9.1
+
+
+D:\Meteor\todoapp\todolist>meteor
+[[[[[ ~\D\Meteor\todoapp\todolist ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:3000/
+   Type Control-C twice to stop.
+
+=> Client modified -- refreshing
+=> Meteor server restarted
+=> Meteor server restarted
+=> Client modified -- refreshing
+I20170608-23:41:11.235(3)? ====== BEGIN MAIL #0 ======
+I20170608-23:41:11.739(3)? (Mail not sent; to enable sending, set the MAIL_URL environment variable.)
+I20170608-23:41:11.786(3)? Content-Type: text/plain
+I20170608-23:41:11.915(3)? From: Meteor Accounts <no-reply@meteor.com>
+I20170608-23:41:11.935(3)? To: aaaa@bbb.ccc
+I20170608-23:41:11.944(3)? Subject: How to reset your password on localhost:3000
+I20170608-23:41:11.947(3)? Message-ID: <704b9fff-819e-e8da-110e-9ee8653c05bb@meteor.com>
+I20170608-23:41:11.949(3)? Content-Transfer-Encoding: quoted-printable
+I20170608-23:41:11.950(3)? Date: Thu, 08 Jun 2017 20:41:09 +0000
+I20170608-23:41:11.951(3)? MIME-Version: 1.0
+I20170608-23:41:11.953(3)?
+I20170608-23:41:11.966(3)? Hello,
+I20170608-23:41:11.968(3)?
+I20170608-23:41:11.969(3)? To reset your password, simply click the link below.
+I20170608-23:41:11.970(3)?
+I20170608-23:41:11.973(3)? http://localhost:3000/#/reset-password/U-vMy39FoQoQ4Ubhd9VRobVS5-G-ZbZuQ5aV=
+I20170608-23:41:11.975(3)? V4bcifM
+I20170608-23:41:12.260(3)?
+I20170608-23:41:12.261(3)? Thanks.
+I20170608-23:41:12.262(3)? ====== END MAIL #0 ======
+I20170608-23:41:14.667(3)? ====== BEGIN MAIL #1 ======
+I20170608-23:41:14.671(3)? (Mail not sent; to enable sending, set the MAIL_URL environment variable.)
+I20170608-23:41:14.673(3)? Content-Type: text/plain
+I20170608-23:41:14.675(3)? From: Meteor Accounts <no-reply@meteor.com>
+I20170608-23:41:14.677(3)? To: aaaa@bbb.ccc
+I20170608-23:41:14.679(3)? Subject: How to reset your password on localhost:3000
+I20170608-23:41:14.680(3)? Message-ID: <93c0b068-047f-eae8-6eef-3bef478cb968@meteor.com>
+I20170608-23:41:14.682(3)? Content-Transfer-Encoding: quoted-printable
+I20170608-23:41:14.684(3)? Date: Thu, 08 Jun 2017 20:41:14 +0000
+I20170608-23:41:14.686(3)? MIME-Version: 1.0
+I20170608-23:41:14.689(3)?
+I20170608-23:41:14.691(3)? Hello,
+I20170608-23:41:14.693(3)?
+I20170608-23:41:14.695(3)? To reset your password, simply click the link below.
+I20170608-23:41:14.696(3)?
+I20170608-23:41:14.698(3)? http://localhost:3000/#/reset-password/NLHYEqaqV3KPef_Dz6QpEFpO4MSU68WBklkS=
+I20170608-23:41:14.699(3)? 9Ml9Fhp
+I20170608-23:41:14.700(3)?
+I20170608-23:41:14.702(3)? Thanks.
+I20170608-23:41:14.704(3)? ====== END MAIL #1 ======
+I20170608-23:44:39.164(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170608-23:44:39.167(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170608-23:44:39.168(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170608-23:44:39.170(3)?     at Array.every (native)
+I20170608-23:44:39.171(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170608-23:44:39.173(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170608-23:44:39.174(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170608-23:44:39.176(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170608-23:44:39.177(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170608-23:44:39.179(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170608-23:44:39.180(3)?     at packages/ddp-server/livedata_server.js:717:40
+I20170608-23:45:10.701(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170608-23:45:10.703(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170608-23:45:10.705(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170608-23:45:10.707(3)?     at Array.every (native)
+I20170608-23:45:10.710(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170608-23:45:10.712(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170608-23:45:10.714(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170608-23:45:10.716(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170608-23:45:10.719(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170608-23:45:10.722(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170608-23:45:10.723(3)?     at packages/ddp-server/livedata_server.js:717:40
+=> Meteor server restarted
+I20170609-00:21:19.245(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170609-00:21:19.247(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170609-00:21:19.250(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170609-00:21:19.254(3)?     at Array.every (native)
+I20170609-00:21:19.258(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170609-00:21:19.260(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170609-00:21:19.261(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170609-00:21:19.264(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170609-00:21:19.265(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170609-00:21:19.268(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170609-00:21:19.269(3)?     at packages/ddp-server/livedata_server.js:717:40
+I20170609-00:21:48.870(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170609-00:21:48.875(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170609-00:21:48.878(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170609-00:21:48.882(3)?     at Array.every (native)
+I20170609-00:21:48.885(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170609-00:21:48.887(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170609-00:21:48.891(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170609-00:21:48.893(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170609-00:21:48.896(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170609-00:21:48.898(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170609-00:21:48.900(3)?     at packages/ddp-server/livedata_server.js:717:40
+I20170609-00:22:16.530(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170609-00:22:16.582(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170609-00:22:16.615(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170609-00:22:16.617(3)?     at Array.every (native)
+I20170609-00:22:16.619(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170609-00:22:16.623(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170609-00:22:16.634(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170609-00:22:16.636(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170609-00:22:16.638(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170609-00:22:16.641(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170609-00:22:16.642(3)?     at packages/ddp-server/livedata_server.js:717:40
+I20170609-00:22:20.975(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170609-00:22:21.024(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170609-00:22:21.054(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170609-00:22:21.087(3)?     at Array.every (native)
+I20170609-00:22:21.098(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170609-00:22:21.113(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170609-00:22:21.115(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170609-00:22:21.117(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170609-00:22:21.119(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170609-00:22:21.123(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170609-00:22:21.125(3)?     at packages/ddp-server/livedata_server.js:717:40
+I20170609-00:23:15.954(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170609-00:23:15.956(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170609-00:23:15.963(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170609-00:23:15.965(3)?     at Array.every (native)
+I20170609-00:23:15.971(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170609-00:23:15.982(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170609-00:23:15.997(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170609-00:23:16.019(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170609-00:23:16.021(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170609-00:23:16.064(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170609-00:23:16.075(3)?     at packages/ddp-server/livedata_server.js:717:40
+I20170609-00:23:20.205(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170609-00:23:20.208(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170609-00:23:20.233(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170609-00:23:20.255(3)?     at Array.every (native)
+I20170609-00:23:20.258(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170609-00:23:20.260(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170609-00:23:20.319(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170609-00:23:20.321(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170609-00:23:20.323(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170609-00:23:20.325(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170609-00:23:20.328(3)?     at packages/ddp-server/livedata_server.js:717:40
+I20170609-00:23:24.030(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170609-00:23:24.071(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170609-00:23:24.083(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170609-00:23:24.087(3)?     at Array.every (native)
+I20170609-00:23:24.092(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170609-00:23:24.094(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170609-00:23:24.113(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170609-00:23:24.115(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170609-00:23:24.117(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170609-00:23:24.119(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170609-00:23:24.123(3)?     at packages/ddp-server/livedata_server.js:717:40
+I20170609-00:26:41.133(3)? Exception while invoking method '/todos/insert' ReferenceError: covsole is not defined
+I20170609-00:26:41.137(3)?     at Todos.allow.insert (lib/collection.js:5:3)
+I20170609-00:26:41.139(3)?     at packages/allow-deny/allow-deny.js:240:13
+I20170609-00:26:41.141(3)?     at Array.every (native)
+I20170609-00:26:41.143(3)?     at Function._.every._.all (packages\underscore.js:253:62)
+I20170609-00:26:41.149(3)?     at [object Object].CollectionPrototype._validatedInsert (packages/allow-deny/allow-deny.j
+s:239:9)
+I20170609-00:26:41.151(3)?     at [object Object].m.(anonymous function) (packages/allow-deny/allow-deny.js:171:46)
+I20170609-00:26:41.153(3)?     at maybeAuditArgumentChecks (packages/ddp-server/livedata_server.js:1737:12)
+I20170609-00:26:41.155(3)?     at packages/ddp-server/livedata_server.js:719:19
+I20170609-00:26:41.156(3)?     at [object Object]._.extend.withValue (packages\meteor.js:1122:17)
+I20170609-00:26:41.158(3)?     at packages/ddp-server/livedata_server.js:717:40
+=> Exited with code: 3221225786
+^CЗавершить выполнение пакетного файла [Y(да)/N(нет)]? y
+
+D:\Meteor\todoapp\todolist>
+
+
+user ID - aaaa@bbb.ccc
+user pass - aaaabbbccc
+
+https://www.npmjs.com/package/stylus
+
