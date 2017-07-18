@@ -7,9 +7,9 @@ Template.tryES6.events({
 function o(){console.log('_'.repeat(Nrepeat-2))};
 
 o();//▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  
-console.log("	Сумма N вещественных случайных чисел от -1 до +1" )
-console.log("	(N:  случайное число от 1 до 1000)" );
-	
+console.log("\u2211\u207F r\u1D62\u20AC" + "(-1.0 ... +1.0 ) i" + 
+"\u20AC" + "[1...n\u20AC" + "[1...1000]]" );
+
 	function sg(x)
 	{if (x >= 0.5)
 			return 1;
